@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Reset e estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 .w-50{width: 50%;}
 .w-100{width: 100%;}
 
-/* Header styles */
+/* Estilo do cabeçalho */
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -33,26 +33,26 @@ nav {
     height: 30px;
 }
 
-.nav-links a {
+.links-nav a {
     text-decoration: none;
     color: #333;
     margin: 0 1rem;
 }
 
-.nav-right {
+.barra-direita {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.nav-right input {
+.barra-direita input {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 200px;
 }
 
-/* Main content styles */
+/* Conteúdo principal */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -60,8 +60,7 @@ main {
     gap: 2rem;
 }
 
-/* Filters sidebar */
-.filters {
+.filtros {
     width: 250px;
     background: white;
     padding: 1rem;
@@ -69,13 +68,13 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.filter-group {
+.grupo-filtro {
     margin: 1rem 0;
     display: flex;
     gap: 0.5rem;
 }
 
-.filter-btn {
+.botao-filtro {
     padding: 0.5rem 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -83,19 +82,18 @@ main {
     cursor: pointer;
 }
 
-.filter-btn.active {
+.botao-filtro.ativo {
     background: #f0f0f0;
 }
 
-/* Vehicle grid */
-.vehicle-grid {
+.grade-veiculos {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.vehicle-card {
+.cartao-veiculo {
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -104,28 +102,28 @@ main {
     color: inherit;
 }
 
-.vehicle-card img {
+.cartao-veiculo img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card-info {
+.info-cartao {
     padding: 1rem;
 }
 
-.card-info h2 {
+.info-cartao h2 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.price {
+.preco {
     font-size: 1.4rem;
     font-weight: bold;
     margin: 1rem 0;
 }
 
-.view-parcels {
+.ver-parcelas {
     background: #e60000;
     color: white;
     border: none;
@@ -135,68 +133,68 @@ main {
     width: 100%;
 }
 
-/* Details page styles */
-.details-page {
+/* Página de detalhes */
+.pagina-detalhes {
     display: block;
     padding: 2rem;
 }
 
-.car-gallery {
+.galeria-carro {
     margin-bottom: 2rem;
 }
 
-.main-image {
+.imagem-principal {
     width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.car-info {
+.info-carro {
     background: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.car-header h1 {
+.cabecalho-carro h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.subtitle {
+.subtitulo {
     color: #666;
     margin-bottom: 1.5rem;
 }
 
-.specs-grid {
+grade-especificacoes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin: 2rem 0;
 }
 
-.spec-item {
+item-especificacao {
     display: flex;
     flex-direction: column;
 }
 
-.label {
+.rotulo {
     color: #666;
     font-size: 0.9rem;
 }
 
-.value {
+.valor {
     font-weight: bold;
 }
 
-.inspection-section {
+secao-inspecao {
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid #ddd;
 }
 
-.inspection-items {
+itens-inspecao {
     list-style: none;
     margin-top: 1rem;
     display: grid;
@@ -204,12 +202,14 @@ main {
     gap: 0.5rem;
 }
 
-.inspection-items li {
+itens-inspecao li {
     color: #008000;
 }
 
 
 
+
+/* GABRIEL SZ */
 .footer-space{
     width: 100%;
     padding: 16px;
@@ -249,4 +249,3 @@ main {
     align-items: center;
     padding: 16px;
 }
-
