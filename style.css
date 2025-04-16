@@ -11,6 +11,9 @@ body {
     background-color: #f4f4f4;
 }
 
+.w-50{width: 50%;}
+.w-100{width: 100%;}
+
 /* Header styles */
 header {
     background-color: white;
@@ -204,3 +207,46 @@ main {
 .inspection-items li {
     color: #008000;
 }
+
+
+
+.footer-space{
+    width: 100%;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 24px auto;
+    margin-top: 64px;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: rgba(0,0,0,0.1) solid 1px; 
+}
+
+.footer-main-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-box{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
