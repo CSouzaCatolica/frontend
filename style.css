@@ -14,11 +14,10 @@ body {
 .w-50{width: 50%;}
 .w-100{width: 100%;}
 
-/* Estilo do cabeçalho */
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem;
+    padding: 16px;
 }
 
 nav {
@@ -29,53 +28,56 @@ nav {
     align-items: center;
 }
 
-.logo img {
-    height: 30px;
-}
-
 .links-nav a {
     text-decoration: none;
     color: #333;
-    margin: 0 1rem;
+    margin: 0 16px;
 }
 
 .barra-direita {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .barra-direita input {
-    padding: 0.5rem;
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 200px;
 }
 
+.barraPesquisaDois {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 192px;
+}
+
 /* Conteúdo principal */
 main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 32px auto;
     display: flex;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .filtros {
     width: 250px;
     background: white;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .grupo-filtro {
-    margin: 1rem 0;
+    margin: 16px 0;
     display: flex;
-    gap: 0.5rem;
+    gap: 8px;
 }
 
 .botao-filtro {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background: white;
@@ -90,7 +92,7 @@ main {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .cartao-veiculo {
@@ -109,38 +111,33 @@ main {
 }
 
 .info-cartao {
-    padding: 1rem;
+    padding: 16px;
 }
 
 .info-cartao h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 19.2px;
+    margin-bottom: 8px;
 }
 
 .preco {
-    font-size: 1.4rem;
+    font-size: 22.4px;
     font-weight: bold;
-    margin: 1rem 0;
+    margin: 16px 0;
 }
 
 .ver-parcelas {
-    background: #e60000;
+    background: #2E2D37;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border-radius: 4px;
+    height: 50px;
     cursor: pointer;
     width: 100%;
 }
 
-/* Página de detalhes */
-.pagina-detalhes {
-    display: block;
-    padding: 2rem;
-}
-
 .galeria-carro {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
 }
 
 .imagem-principal {
@@ -152,26 +149,26 @@ main {
 
 .info-carro {
     background: white;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .cabecalho-carro h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 32px;
+    margin-bottom: 8px;
 }
 
 .subtitulo {
     color: #666;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 
 grade-especificacoes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+    gap: 16px;
+    margin: 32px 0;
 }
 
 item-especificacao {
@@ -181,7 +178,7 @@ item-especificacao {
 
 .rotulo {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 14.4px;
 }
 
 .valor {
@@ -189,25 +186,18 @@ item-especificacao {
 }
 
 secao-inspecao {
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-top: 32px;
+    padding-top: 32px;
     border-top: 1px solid #ddd;
 }
 
 itens-inspecao {
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 16px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.5rem;
+    gap: 8px;
 }
-
-itens-inspecao li {
-    color: #008000;
-}
-
-
-
 
 /* GABRIEL SZ */
 .footer-space{
