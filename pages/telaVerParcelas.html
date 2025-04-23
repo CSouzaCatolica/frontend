@@ -1,11 +1,132 @@
+<!-- Toda documentação foi feita com base na conversa obtida com professor, desta forma, especificando 
+ o que é possível realizar apenas com css e html -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item</title>
+    <title>Detalhes do Veículo - Webmotors</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../verParcelas.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../src/assets/logoCabecalho.png" alt="Webmotors">
+                </a>
+            </div>
+            <!-- navbar conforme site original e funcional -->
+            <div class="links-nav">
+                <a href="#">Comprar</a>
+                <a href="#">Vender</a>
+                <a href="#">Serviços</a>
+            </div>
+            <div class="barra-direita">
+                <input type="search" placeholder="Busque por marca ou modelo">
+                <button class="botao-login">Entrar</button>
+                <button class="favoritos">❤</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- IMagens do carro conforme o site original-->
+    <div class="banner-imagens">
+        <img src="../src/assets/porsche_traseira.png" alt="traseira">
+        <img src="../src/assets/porsche_frente.png" alt="frente">
+        <img src="../src/assets/porsche_lateral.png" alt="lateral">
+    </div>
+
+    <!-- Card com informações do veículo -->
+    <div class="cartao-veiculo detalhes">
+        <div class="header-detalhes">
+            <h1>PORSCHE <span class="destaque-vermelho">911</span></h1>
+            <p class="subtitulo">3.0 24V H6 GASOLINA CARRERA S CABRIOLET PDK</p>
+        </div>
+
+        <div class="preco-detalhes">
+            <p class="preco-grande">R$ 950.000</p>
+            <button class="botao-contato">Contatar vendedor</button>
+        </div>
+
+        <div class="informacoes-detalhadas">
+            <div class="info-item">
+                <span class="info-label">Ano</span>
+                <span class="info-value">2022/2023</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Quilometragem</span>
+                <span class="info-value">5.000 km</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Cor</span>
+                <span class="info-value">Prata</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Câmbio</span>
+                <span class="info-value">Automático</span>
+            </div>
+        </div>
+
+        <div class="simulacao-financiamento">
+            <h2>Simulação de Financiamento</h2>
+            
+            <div class="opcoes-financiamento">
+                <div class="opcao-financiamento">
+                    <h3>Entrada de 50%</h3>
+                    <p class="valor-entrada">R$ 475.000</p>
+                    <p><strong>+</strong> 48x de <span class="destaque-vermelho">R$ 12.980</span></p>
+                </div>
+                
+                <div class="opcao-financiamento destaque">
+                    <h3>Entrada de 60%</h3>
+                    <p class="valor-entrada">R$ 570.000</p>
+                    <p><strong>+</strong> 48x de <span class="destaque-vermelho">R$ 10.380</span></p>
+                </div>
+                
+                <div class="opcao-financiamento">
+                    <h3>Entrada de 70%</h3>
+                    <p class="valor-entrada">R$ 665.000</p>
+                    <p><strong>+</strong> 48x de <span class="destaque-vermelho">R$ 7.850</span></p>
+                </div>
+            </div>
+            
+            <p class="disclaimer">Valores simulados. Sujeito à aprovação de crédito.</p>
+            <button class="solicitar-financiamento">Solicitar Financiamento</button>
+        </div>
+        
+        <div class="descricao-veiculo">
+            <h2>Descrição do Veículo</h2>
+            <p>Porsche 911 Carrera S Cabriolet com apenas 5.000 km rodados. Veículo impecável, revisado, com garantia de fábrica até 2025. Possui teto retrátil, bancos em couro, sistema de som premium Burmester, assistente de manutenção de faixa, entre outros itens de série.</p>
+        </div>
+    </div>
+
+    <!--footer contendo todas informações dos alunos para identificação do projeto e também melhor legibilidade do site-->
     
+    <footer class="footer-space">
+        <div class="footer-main-container">
+            <div class="footer-container">
+                <div class="devs">
+                    <h2>Desenvolvedores:</h2>
+                    <ul>
+                        <li><a href="https://github.com/GabrielGVCB">Gabriel Batista</a></li>
+                        <li><a href="https://github.com/CSouzaCatolica">Gabriel Chiarelli</a></li>
+                        <li><a href="https://github.com/MarceloSFH7">Marcelo Soares</a></li>
+                    </ul>
+                </div>
+                <!--Contatos fictícios apenas para melhor apresentação-->
+                <div class="footer-box w-50">
+                    <p>Suporte e Atendimento</p>
+                    <p>WhatsApp: (11) 99999-9999</p>
+                    <p>Email: atendimento@alunos.com.br</p>
+                </div>
+            </div>
+            <div class="footer-box w-100">
+                <p>© 2025 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

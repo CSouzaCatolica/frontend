@@ -1,0 +1,218 @@
+.banner-imagens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  padding-top: 70px;
+}
+
+.banner-imagens img {
+  width: 33.33%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cartao-veiculo.detalhes {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  margin-top: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  width: 90%;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.destaque-vermelho {
+  color: #f3123c;
+  font-weight: bold;
+}
+
+.header-detalhes {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+.header-detalhes h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header-detalhes .subtitulo {
+  font-size: 16px;
+  color: #666;
+}
+
+.preco-detalhes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.preco-grande {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f3123c;
+}
+
+.botao-contato {
+  background-color: #f3123c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-contato:hover {
+  background-color: #d10e32;
+}
+
+.informacoes-detalhadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.simulacao-financiamento {
+  background-color: #f9f9f9;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.simulacao-financiamento h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.opcoes-financiamento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.opcao-financiamento {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.opcao-financiamento.destaque {
+  border: 2px solid #f3123c;
+  box-shadow: 0 4px 8px rgba(243, 18, 60, 0.1);
+}
+
+.opcao-financiamento h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.valor-entrada {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.solicitar-financiamento {
+  background-color: #2E2D37;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.solicitar-financiamento:hover {
+  background-color: #1a1921;
+}
+
+.descricao-veiculo {
+  margin-top: 32px;
+}
+
+.descricao-veiculo h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.descricao-veiculo p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-imagens {
+    flex-direction: column;
+    position: relative;
+    padding-top: 0;
+  }
+  
+  .banner-imagens img {
+    width: 100%;
+  }
+  
+  .cartao-veiculo.detalhes {
+    margin-top: 24px;
+  }
+  
+  .preco-detalhes {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .opcoes-financiamento {
+    grid-template-columns: 1fr;
+  }
+}
