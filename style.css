@@ -267,7 +267,7 @@ main {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    background-color: #000;
+    background-color: #181818;
     color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -293,6 +293,8 @@ main {
 .footer-box p {
     margin-bottom: 8px;
     color: #ccc;
+    text-align: center;
+    text-justify: center;
 }
 
 .devs {
