@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.site-header .logo {
+  font-weight: bold;
+}
+
+.site-header .menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.site-footer {
+  background-color: #8c1d40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.minha-conta-container {
+  padding: 30px;
+}
+
+.minha-conta-header {
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.foto-usuario img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.info-usuario {
+  margin-left: 20px;
+}
+
+.info-usuario h1 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.status-usuario {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #d9f2ee;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.aba.ativa {
+  border-bottom: 3px solid #007d8f;
+}
+
+.dados-pessoais h2 {
+  color: #007d8f;
+  margin-top: 25px;
+  padding: 20px 0;
+}
+
+
+.contato-info {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.contato-info div {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  flex: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}

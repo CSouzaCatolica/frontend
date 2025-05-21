@@ -11,12 +11,42 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Webmotors</div>
-            <div class="nav-links">
-                <a href="#">Anunciar moto</a>
-                <a href="#">Vender sua moto</a>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../src/assets/logoCabecalho.png" alt="Webmotors">
+                </a>
             </div>
-            <button class="botao-entrar">Entrar</button>
+            
+            <!-- navbar conforme site original e funcional -->
+            <div class="links-nav">
+                <a href="../index.html">Comprar</a>
+                <a href="#">Vender</a>
+        
+                <!-- Submenu de Serviços com HTML e CSS puro -->
+                <div class="dropdown">
+                    <!-- Checkbox para controlar abertura -->
+                    <input type="checkbox" id="toggle-servicos" class="dropdown-toggle">
+                    <label for="toggle-servicos" class="dropdown-label">Serviços</label>
+                    
+                    <!-- Lista de subitens de Serviços -->
+                    <ul class="submenu">
+                        <li><a href="#">Revisão</a></li>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="#">Seguros</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="barra-direita">
+                <!--NÃO É POSSÍVEL-->
+                <!--Para armazenamento dos dados como senha e user, seria necesárop um banco no sistema-->
+                <!--Desta forma, o sistema de favoritos não é possível aplicar no momento também-->
+                <input type="search" placeholder="Busque por marca ou modelo">
+        
+                <!--Não é possível, pois teria que ter um banco criado para login-->
+                <button class="botao-login"><a href="pages/minhaConta.html">Entrar</a></button>
+                <button class="favoritos">❤</button> <!--aba criados com base nas pesquisas salvas do cliente-->
+            </div>
         </nav>
     </header>
 
@@ -39,7 +69,7 @@
     <!-- Banner -->
     <section class="banner">
         <div class="container">
-            <h2>Banner Webmotors</h2>
+            <h2>Webmotors</h2>
         </div>
     </section>
 
@@ -49,22 +79,18 @@
             <h2>Motivos de sobra pra você vender seu carro aqui</h2>
             <div class="razoes-grid">
                 <div class="razao-item">
-                    <img src="/api/placeholder/60/60" alt="Ícone razões">
                     <h3>Milhões de compradores!</h3>
                     <p>+ 33 milhões* de visitas por mês.</p>
                 </div>
                 <div class="razao-item">
-                    <img src="/api/placeholder/60/60" alt="Ícone razões">
                     <h3>Planos pra todos os bolsos</h3>
                     <p>Escolha o melhor plano para vender e parcele em até 10x.</p>
                 </div>
                 <div class="razao-item">
-                    <img src="/api/placeholder/60/60" alt="Ícone razões">
                     <h3>Venda com o Financiamento Santander</h3>
                     <p>Aproveite os melhores benefícios e venda financiado para pessoa física.</p>
                 </div>
                 <div class="razao-item">
-                    <img src="/api/placeholder/60/60" alt="Ícone razões">
                     <h3>Prático, intuitivo e muito fácil!</h3>
                     <p>Anuncie seu carro ou moto no site ou no App e ative seu anúncio em poucos passos.</p>
                 </div>
@@ -81,7 +107,6 @@
         <div class="container">
             <div class="cards-container">
                 <div class="card">
-                    <img src="/api/placeholder/100/100" alt="Imagem Dúvidas">
                     <div class="card-content">
                         <h3>Tem dúvidas de como vender seu veículo rapidão?</h3>
                         <p>Vem pra FAQ!</p>
@@ -89,7 +114,6 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/api/placeholder/100/100" alt="Imagem Dicas">
                     <div class="card-content">
                         <h3>Dicas para vender meu carro ou moto com segurança</h3>
                         <a href="#" class="card-link">Acesse aqui →</a>
@@ -106,7 +130,7 @@
             <p>Confira nossas dicas para criar um anúncio perfeito</p>
             <div class="video-container">
                 <div class="video-placeholder">
-                    <img src="/api/placeholder/100/100" alt="Santander">
+                    <img src="/src/assets/carVideo.gif" style="width: 45rem; height: 25rem; border-radius: 10px;" alt="Santander">
                 </div>
             </div>
         </div>
@@ -120,7 +144,6 @@
             <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">São poucos passos pra vender seu carro. Tá esperando o que? Vem anunciar na Webmotors!</p>
             
             <div style="text-align: center; margin-bottom: 40px;">
-                <img src="/api/placeholder/200/150" alt="Ilustra moto">
                 <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
                     <div>Pra todos os bolsos</div>
                     <div>Pra vender rápido</div>
@@ -136,25 +159,21 @@
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <img src="/api/placeholder/50/50" alt="Icone razões">
                     <h3>Crie seu anúncio 100% online</h3>
                     <p>Cause uma boa impressão! Preencha todos os dados e adicione fotos do veículo.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <img src="/api/placeholder/50/50" alt="Icone razões">
                     <h3>Defina um preço para o seu veículo</h3>
                     <p>Consulte a Tabela Fipe e Webmotors e garanta que fará um bom negócio.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <img src="/api/placeholder/50/50" alt="Icone razões">
                     <h3>Combine via chat com o comprador</h3>
                     <p>Receba mensagens e negocie a melhor oferta pelo nosso chat seguro!</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <img src="/api/placeholder/50/50" alt="Icone razões">
                     <h3>Fechou negócio? Dê sua opinião</h3>
                     <p>Após concluir a venda, desative seu anúncio e avalie sua experiência.</p>
                 </div>
@@ -261,7 +280,7 @@
         <div class="container">
             <div class="security-content">
                 <div class="security-item">
-                    <p><img src="/api/placeholder/20/20" alt="verify-secured-icon" style="vertical-align: middle; margin-right: 10px;">Na Webmotors, suas informações são criptografadas. Nenhum dado pessoal fornecido por você será usado para outros fins. A empresa preza por sua privacidade.</p>
+                    <p>Na Webmotors, suas informações são criptografadas. Nenhum dado pessoal fornecido por você será usado para outros fins. A empresa preza por sua privacidade.</p>
                 </div>
                 <div class="security-item">
                     <div class="payment-methods">

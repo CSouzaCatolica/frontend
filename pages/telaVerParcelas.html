@@ -18,19 +18,36 @@
                     <img src="../src/assets/logoCabecalho.png" alt="Webmotors">
                 </a>
             </div>
+            
             <!-- navbar conforme site original e funcional -->
             <div class="links-nav">
-                <a href="#">Comprar</a>
+                <a href="../index.html">Comprar</a>
                 <a href="#">Vender</a>
-                <a href="#">Serviços</a>
+        
+                <!-- Submenu de Serviços com HTML e CSS puro -->
+                <div class="dropdown">
+                    <!-- Checkbox para controlar abertura -->
+                    <input type="checkbox" id="toggle-servicos" class="dropdown-toggle">
+                    <label for="toggle-servicos" class="dropdown-label">Serviços</label>
+                    
+                    <!-- Lista de subitens de Serviços -->
+                    <ul class="submenu">
+                        <li><a href="#">Revisão</a></li>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="#">Seguros</a></li>
+                    </ul>
+                </div>
             </div>
+        
             <div class="barra-direita">
                 <!--NÃO É POSSÍVEL-->
                 <!--Para armazenamento dos dados como senha e user, seria necesárop um banco no sistema-->
                 <!--Desta forma, o sistema de favoritos não é possível aplicar no momento também-->
                 <input type="search" placeholder="Busque por marca ou modelo">
+        
+                <!--Não é possível, pois teria que ter um banco criado para login-->
                 <button class="botao-login">Entrar</button>
-                <button class="favoritos">❤</button>
+                <button class="favoritos">❤</button> <!--aba criados com base nas pesquisas salvas do cliente-->
             </div>
         </nav>
     </header>
