@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webmotors</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,12 +19,14 @@
             <div class="links-nav">
                 <a href="#">Comprar</a>
                 <a href="pages/menuVender.html">Vender</a>
-                <a href="#">Serviços</a>
+                <a href="pages/servicos.html">Serviços</a>
             </div>
             <div class="barra-direita">
                 <input type="search" placeholder="Busque por marca ou modelo">
+
                 <button class="botao-login"><a href="pages/minhaConta.html">Entrar</a></button>
-                <button class="favoritos">❤</button>
+                <button class="favoritos"><i class="fa-regular fa-heart"></i></button>
+
             </div>
         </nav>
     </header>
@@ -32,8 +35,8 @@
         <aside class="filtros">
             <h3>Filtros Aplicados</h3>
             <div class="grupo-filtro">
-                <button class="botao-filtro ativo">🚗 Carros</button>
-                <button class="botao-filtro">🏍️ Motos</button>
+                <button class="botao-filtro ativo"><i class="fa-solid fa-car"></i> Carros</button>
+                <button class="botao-filtro"><i class="fa-solid fa-motorcycle"></i> Motos</button>
             </div>
 
             <div class="localizacao">
@@ -47,38 +50,38 @@
             <div class="cartao-veiculo">
                 <img src="src/assets/porsche_frente.png" alt="Porsche">
                 <div class="info-cartao">
-                    <h2>Porsche</h2>
+                    <h2>PORSCHE 911</h2>
                     <p>3.0 24V H6 GASOLINA CARRERA S CABRIOLET PDK</p>
-                    <p class="preco">R$ 50.000</p>
+                    <p class="preco">R$ 999.000</p>
                     <a href="pages/telaVerParcelas.html"><button class="ver-parcelas">Ver parcelas</button></a>
                 </div>
             </div>
 
             <div class="cartao-veiculo">
-                <img src="fusca.jpg" alt="Porsche">
+                <img src="src/assets/Fusca_frente.jpg" alt="Fusca">
                 <div class="info-cartao">
-                    <h2>Porsche</h2>
-                    <p>1.3 8V GASOLINA 2p Manual</p>
+                    <h2>FUSCA</h2>
+                    <p>1.5 8V GASOLINA 2P MANUAL</p>
+                    <p class="preco">R$ 35.900</p>
+                    <button class="ver-parcelas">Ver parcelas</button>
+                </div>
+            </div>
+
+            <div class="cartao-veiculo">
+                <img src="src/assets/yamaha_fz25_frete.jpg" alt="Yamaha FZ25 Fazer">
+                <div class="info-cartao">
+                    <h2>YAMAHA FZ25</h2>
+                    <p>YAMAHA FZ25 FAZER ABS</p>
                     <p class="preco">R$ 50.000</p>
                     <button class="ver-parcelas">Ver parcelas</button>
                 </div>
             </div>
 
             <div class="cartao-veiculo">
-                <img src="fusca.jpg" alt="Porsche">
+                <img src="src/assets/mercedesbenz_gla_200_frente.jpg" alt="Mercedes">
                 <div class="info-cartao">
-                    <h2>Porsche</h2>
-                    <p>1.3 8V GASOLINA 2p Manual</p>
-                    <p class="preco">R$ 50.000</p>
-                    <button class="ver-parcelas">Ver parcelas</button>
-                </div>
-            </div>
-
-            <div class="cartao-veiculo">
-                <img src="fusca.jpg" alt="Porsche">
-                <div class="info-cartao">
-                    <h2>Porsche</h2>
-                    <p>1.3 8V GASOLINA 2p Manual</p>
+                    <h2>MERCEDES-BENZ GLA 200</h2>
+                    <p>1.6 CGI FLEX ADVANCE 7G-DCT</p>
                     <p class="preco">R$ 50.000</p>
                     <button class="ver-parcelas">Ver parcelas</button>
                 </div>
@@ -143,13 +146,29 @@
             <div class="devs">
               <h2>Desenvolvedores:</h2>
               <ul>
-                <li><a href="https://github.com/GabrielGVCB">Gabriel Batista</a></li>
-                <li><a href="https://github.com/CSouzaCatolica">Gabriel Chiarelli</a></li>
-                <li><a href="https://github.com/MarceloSFH7">Marcelo Soares</a></li>
+                    <li>
+                        <a href="https://github.com/GabrielGVCB">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Gabriel Batista</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/CSouzaCatolica">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Gabriel Chiarelli</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/MarceloSFH7">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Marcelo Soares</span></a>
+                    </li>
               </ul>
             </div>
             <div class="footer-box w-50">
-              Sobre
+                <ul>
+                    <li><a href="#">Comprar</a></li>
+                    <li><a href="pages/menuVender.html">Vender</a></li>
+                    <li><a href="pages/servicos.html">Serviços</a></li>
+                </ul>
             </div>
           </div>
           <div class="footer-box w-100">
