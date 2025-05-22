@@ -7,57 +7,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Parcelas- Webmotors</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../verParcelas.css">
+    <link rel="stylesheet" href="../src/assets/style.css">
+    <link rel="stylesheet" href="../src/assets/verParcelas.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="./home.html">
-                    <img src="../src/assets/logoCabecalho.png" alt="Webmotors">
+                <a href="../pages/home.html">
+                    <img src="../src/assets/img/logoCabecalho.png" alt="Webmotors">
                 </a>
             </div>
             
             <!-- navbar conforme site original e funcional -->
             <div class="links-nav">
-                <a href="./home.html">Comprar</a>
-                <a href="#">Vender</a>
-        
-                <!-- Submenu de Serviços com HTML e CSS puro -->
-                <div class="dropdown">
-                    <!-- Checkbox para controlar abertura -->
-                    <input type="checkbox" id="toggle-servicos" class="dropdown-toggle">
-                    <label for="toggle-servicos" class="dropdown-label">Serviços</label>
-                    
-                    <!-- Lista de subitens de Serviços -->
-                    <ul class="submenu">
-                        <li><a href="#">Revisão</a></li>
-                        <li><a href="#">Financiamento</a></li>
-                        <li><a href="#">Seguros</a></li>
-                    </ul>
-                </div>
+                <a href="#">Comprar</a>
+                <a href="../pages/menuVender.html">Vender</a>
+                <a href="../pages/servicos.html">Serviços</a>
             </div>
-        
-            <div class="barra-direita">
-                <!--NÃO É POSSÍVEL-->
-                <!--Para armazenamento dos dados como senha e user, seria necesárop um banco no sistema-->
-                <!--Desta forma, o sistema de favoritos não é possível aplicar no momento também-->
+            
+                <div class="barra-direita">
                 <input type="search" placeholder="Busque por marca ou modelo">
-        
-                <!--Não é possível, pois teria que ter um banco criado para login-->
-                <button class="botao-login">Entrar</button>
-                <button class="favoritos">❤</button> <!--aba criados com base nas pesquisas salvas do cliente-->
+
+                <button class="botao-login"><a href="../pages/minhaConta.html">Entrar</a></button>
+                <button class="favoritos"><i class="fa-regular fa-heart"></i></button>
+
             </div>
         </nav>
     </header>
 
     <!-- IMagens do carro conforme o site original-->
     <div class="banner-imagens">
-        <img src="../src/assets/porsche_traseira.png" alt="traseira">
-        <img src="../src/assets/porsche_frente.png" alt="frente">
-        <img src="../src/assets/porsche_lateral.png" alt="lateral">
+        <img src="../src/assets/img/porsche_traseira.png" alt="traseira">
+        <img src="../src/assets/img/porsche_frente.png" alt="frente">
+        <img src="../src/assets/img/porsche_lateral.png" alt="lateral">
     </div>
 
     <!-- Card com informações do veículo -->
