@@ -241,3 +241,139 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 992px (laptops menores e tablets) - verParcelas.css */
+@media (max-width: 992px) {
+    .banner-imagens img {
+        height: 200px; /* Reduz a altura das imagens do banner */
+    }
+
+    .cartao-veiculo.detalhes {
+        margin-top: 280px; /* Ajusta a margem superior do cartão de detalhes */
+        padding: 25px; /* Reduz o padding */
+    }
+
+    .preco-grande {
+        font-size: 28px; /* Diminui o tamanho da fonte do preço grande */
+    }
+
+    .botao-contato {
+        padding: 10px 20px; /* Ajusta o padding do botão de contato */
+        font-size: 15px;
+    }
+
+    .informacoes-detalhadas {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta o grid de informações detalhadas */
+        gap: 18px;
+    }
+
+    .simulacao-financiamento h2,
+    .descricao-veiculo h2 {
+        font-size: 18px; /* Diminui o tamanho da fonte dos títulos de seção */
+    }
+
+    .opcoes-financiamento {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajusta o grid de opções de financiamento */
+        gap: 12px;
+    }
+
+    .opcao-financiamento {
+        padding: 14px; /* Reduz o padding das opções de financiamento */
+    }
+
+    .valor-entrada {
+        font-size: 16px; /* Diminui o tamanho da fonte do valor de entrada */
+    }
+
+    .solicitar-financiamento {
+        padding: 10px 20px; /* Ajusta o padding do botão de solicitação */
+        font-size: 15px;
+    }
+}
+
+/* Estilos para telas menores que 768px (tablets e smartphones) - verParcelas.css */
+@media (max-width: 768px) {
+    .banner-imagens {
+        flex-direction: column; /* Empilha as imagens do banner verticalmente */
+        position: relative; /* Remove o fixed para evitar sobreposição */
+        padding-top: 0; /* Remove o padding top */
+    }
+    
+    .banner-imagens img {
+        width: 100%; /* Ocupa a largura total */
+        height: 200px; /* Define uma altura fixa para as imagens empilhadas */
+    }
+    
+    .cartao-veiculo.detalhes {
+        margin-top: 20px; /* Ajusta a margem superior para espaçamento */
+        width: 95%; /* Aumenta a largura do cartão */
+        padding: 20px;
+    }
+    
+    .preco-detalhes {
+        flex-direction: column; /* Empilha o preço e o botão de contato */
+        gap: 15px;
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+
+    .preco-grande {
+        font-size: 26px; /* Diminui o tamanho da fonte do preço grande */
+    }
+
+    .informacoes-detalhadas {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 15px;
+    }
+    
+    .opcoes-financiamento {
+        grid-template-columns: 1fr; /* Uma coluna nas opções de financiamento */
+    }
+
+    .descricao-veiculo p {
+        font-size: 15px; /* Diminui o tamanho da fonte da descrição */
+    }
+}
+
+/* Estilos para telas menores que 480px (smartphones) - verParcelas.css */
+@media (max-width: 480px) {
+    .cartao-veiculo.detalhes {
+        padding: 15px; /* Reduz o padding do cartão de detalhes */
+    }
+
+    .preco-grande {
+        font-size: 22px; /* Diminui ainda mais o tamanho da fonte do preço grande */
+    }
+
+    .botao-contato,
+    .solicitar-financiamento {
+        padding: 10px 15px; /* Ajusta o padding dos botões */
+        font-size: 14px;
+    }
+
+    .info-label,
+    .info-value {
+        font-size: 13px; /* Diminui o tamanho da fonte das informações detalhadas */
+    }
+
+    .simulacao-financiamento h2,
+    .descricao-veiculo h2 {
+        font-size: 16px; /* Diminui o tamanho da fonte dos títulos das seções */
+    }
+
+    .opcao-financiamento h3,
+    .valor-entrada {
+        font-size: 14px; /* Diminui o tamanho da fonte das opções de financiamento */
+    }
+
+    .disclaimer {
+        font-size: 11px; /* Diminui o tamanho da fonte do disclaimer */
+    }
+
+    .descricao-veiculo p {
+        font-size: 14px; /* Diminui ainda mais o tamanho da fonte da descrição */
+    }
+}

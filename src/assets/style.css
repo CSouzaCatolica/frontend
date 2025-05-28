@@ -328,3 +328,170 @@ main {
     color: #ccc;
     text-decoration: underline;
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 992px (laptops menores e tablets) - style.css (home.html) */
+@media (max-width: 992px) {
+    nav {
+        flex-wrap: wrap; /* Permite que os itens da navegação quebrem para a próxima linha */
+        justify-content: center;
+        gap: 15px; /* Espaçamento entre os itens da nav */
+    }
+
+    .links-nav {
+        flex-direction: column; /* Empilha os links de navegação */
+        align-items: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .barra-direita {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .barra-direita input {
+        width: 80%; /* Aumenta a largura da barra de pesquisa */
+        max-width: 300px;
+    }
+
+    main {
+        flex-direction: column; /* Empilha os filtros e a grade de veículos */
+        align-items: center; /* Centraliza os itens */
+        margin: 20px auto; /* Ajusta a margem */
+    }
+
+    .filtros {
+        width: 90%; /* Aumenta a largura dos filtros */
+        max-width: 400px; /* Limita a largura máxima */
+        margin-bottom: 20px;
+    }
+
+    .grade-veiculos {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta o grid para 2 colunas */
+        width: 95%; /* Ocupa mais largura */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Empilha os desenvolvedores e o "Sobre" no rodapé */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-box.w-50,
+    .footer-box.w-100 {
+        width: 100%; /* Ocupa toda a largura no rodapé */
+    }
+}
+
+/* Estilos para telas menores que 768px (tablets e smartphones) - style.css (home.html) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduz o padding do cabeçalho */
+    }
+
+    .logo img {
+        height: 25px; /* Diminui o tamanho do logo */
+    }
+
+    .links-nav a {
+        font-size: 14px; /* Diminui o tamanho da fonte dos links */
+        padding: 5px 0;
+    }
+
+    .barra-direita input {
+        padding: 8px 10px; /* Ajusta o padding da barra de pesquisa */
+        font-size: 14px;
+    }
+
+    .botao-login {
+        padding: 6px 12px; /* Ajusta o padding do botão de login */
+        font-size: 14px;
+    }
+
+    .favoritos {
+        font-size: 18px; /* Diminui o tamanho do ícone de favoritos */
+    }
+
+    .filtros h3,
+    .localizacao h4 {
+        font-size: 18px; /* Diminui o tamanho da fonte dos títulos dos filtros */
+    }
+
+    .grupo-filtro .botao-filtro {
+        padding: 6px 12px; /* Ajusta o padding dos botões de filtro */
+        font-size: 13px;
+    }
+
+    .grade-veiculos {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 15px;
+    }
+
+    .cartao-veiculo {
+        width: 95%; /* Ajusta a largura do cartão de veículo */
+        margin: 0 auto; /* Centraliza o cartão */
+    }
+
+    .info-cartao h2 {
+        font-size: 16px; /* Diminui o tamanho da fonte do título do veículo */
+    }
+
+    .info-cartao p {
+        font-size: 13px; /* Diminui o tamanho da fonte da descrição */
+    }
+
+    .preco {
+        font-size: 20px; /* Diminui o tamanho da fonte do preço */
+    }
+
+    .ver-parcelas {
+        padding: 8px 12px; /* Ajusta o padding do botão "Ver parcelas" */
+        font-size: 14px;
+        height: auto;
+    }
+
+    .footer-space {
+        margin: 30px auto 15px; /* Ajusta as margens do rodapé */
+        padding-top: 20px;
+    }
+
+    .footer-container {
+        padding: 15px; /* Reduz o padding do container do rodapé */
+    }
+
+    .devs h2, .footer-box h2 {
+        font-size: 16px; /* Diminui o tamanho da fonte dos títulos do rodapé */
+    }
+
+    .devs li, .footer-box p {
+        font-size: 13px; /* Diminui o tamanho da fonte do texto do rodapé */
+    }
+}
+
+/* Estilos para telas menores que 480px (smartphones) - style.css (home.html) */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px; /* Reduz ainda mais o padding da navegação */
+    }
+
+    .barra-direita input {
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    .filtros {
+        padding: 15px; /* Reduz o padding dos filtros */
+    }
+
+    .marcasHome img {
+        width: 45%; /* Ajusta o tamanho das imagens das marcas */
+        margin-bottom: 10px;
+    }
+}
