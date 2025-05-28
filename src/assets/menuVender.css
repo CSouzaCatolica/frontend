@@ -246,7 +246,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-/* 
+/*
 /* Como vender section */
 .como-vender {
 padding: 60px 0;
@@ -402,4 +402,127 @@ width: 40px;
 height: 25px;
 background-color: #eee;
 border-radius: 4px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 992px (laptops menores e tablets) - menuVender.css */
+@media (max-width: 992px) {
+    .razoes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid para 2 colunas */
+        gap: 20px;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Empilha os cartões verticalmente */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Aumenta a largura dos cartões */
+        max-width: 500px; /* Limita a largura máxima */
+    }
+
+    .steps-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid de passos */
+        gap: 20px;
+    }
+
+    .step {
+        width: calc(50% - 15px); /* Dois passos por linha */
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta o grid de depoimentos */
+    }
+
+    .video-placeholder {
+        height: 350px; /* Reduz a altura do placeholder do vídeo */
+    }
+}
+
+/* Estilos para telas menores que 768px (tablets e smartphones) - menuVender.css */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px; /* Diminui o tamanho da fonte do título hero */
+    }
+
+    .hero p {
+        font-size: 16px; /* Diminui o tamanho da fonte do parágrafo hero */
+    }
+
+    .razoes h2,
+    .video-section h2,
+    .como-vender h2,
+    .testimonials h2,
+    .faq h2 {
+        font-size: 24px; /* Diminui os títulos das seções */
+    }
+
+    .razoes-grid,
+    .testimonials-grid,
+    .steps-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 20px;
+    }
+
+    .step {
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    .video-placeholder {
+        height: 250px; /* Reduz ainda mais a altura do placeholder do vídeo */
+    }
+
+    .security-content {
+        flex-direction: column; /* Empilha o conteúdo da seção de segurança */
+        gap: 20px;
+    }
+
+    .security-item {
+        max-width: 90%; /* Ajusta a largura do item de segurança */
+    }
+}
+
+/* Estilos para telas menores que 480px (smartphones) - menuVender.css */
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 0; /* Reduz o padding da seção hero */
+    }
+
+    .hero h1 {
+        font-size: 22px; /* Diminui o tamanho da fonte do título hero */
+    }
+
+    .hero p {
+        font-size: 14px; /* Diminui o tamanho da fonte do parágrafo hero */
+    }
+
+    .btn-primary {
+        padding: 10px 20px; /* Ajusta o padding do botão primário */
+        font-size: 14px; /* Diminui o tamanho da fonte do botão primário */
+    }
+
+    .razoes h2,
+    .video-section h2,
+    .como-vender h2,
+    .testimonials h2,
+    .faq h2 {
+        font-size: 20px; /* Diminui ainda mais os títulos das seções */
+    }
+
+    .card {
+        padding: 15px; /* Reduz o padding do cartão */
+    }
+    
+    .video-placeholder {
+        height: 180px; /* Mais uma redução na altura do placeholder do vídeo */
+    }
+
+    .faq-item {
+        font-size: 14px; /* Diminui o tamanho da fonte dos itens do FAQ */
+        padding: 12px 15px;
+    }
 }

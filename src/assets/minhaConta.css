@@ -85,3 +85,73 @@ body {
   flex: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 768px (tablets e smartphones) - minhaConta.css */
+@media (max-width: 768px) {
+    .minha-conta-container {
+        padding: 20px; /* Reduz o padding do container principal */
+    }
+
+    .minha-conta-header {
+        flex-direction: column; /* Empilha a foto e as informações do usuário */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+    }
+
+    .foto-usuario img {
+        width: 80px; /* Diminui o tamanho da foto do usuário */
+        height: 80px;
+    }
+
+    .info-usuario {
+        margin-left: 0; /* Remove a margem esquerda */
+        margin-top: 15px; /* Adiciona margem superior */
+    }
+
+    .info-usuario h1 {
+        font-size: 1.3em; /* Diminui o tamanho da fonte do nome do usuário */
+    }
+
+    .status-usuario {
+        font-size: 0.8em; /* Diminui o tamanho da fonte do status */
+        padding: 5px 10px;
+    }
+
+    .dados-pessoais h2 {
+        font-size: 1.3em; /* Diminui o tamanho da fonte dos títulos de seção */
+        padding: 15px 0;
+    }
+
+    .contato-info {
+        flex-direction: column; /* Empilha as informações de contato */
+        gap: 15px; /* Ajusta o espaçamento */
+    }
+
+    .contato-info div {
+        padding: 10px; /* Reduz o padding dos itens de contato */
+    }
+}
+
+/* Estilos para telas menores que 480px (smartphones) - minhaConta.css */
+@media (max-width: 480px) {
+    .minha-conta-container {
+        padding: 15px; /* Reduz ainda mais o padding do container principal */
+    }
+
+    .info-usuario h1 {
+        font-size: 1.2em; /* Diminui o tamanho da fonte do nome do usuário */
+    }
+
+    .dados-pessoais p {
+        font-size: 0.9em; /* Diminui o tamanho da fonte dos parágrafos */
+    }
+
+    .contato-info strong,
+    .contato-info p {
+        font-size: 0.85em; /* Diminui o tamanho da fonte dos detalhes de contato */
+    }
+}
