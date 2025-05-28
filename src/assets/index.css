@@ -1,4 +1,4 @@
-
+/* Reset e estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -89,4 +89,50 @@ body {
 
 .loading {
     display: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 768px (tablets e smartphones) - index.css */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px; /* Reduz o padding do container de login */
+        margin: 20px; /* Adiciona margem para não colar nas bordas em telas pequenas */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Diminui o tamanho da fonte do título do logo */
+    }
+
+    .form-group input {
+        padding: 10px 12px; /* Ajusta o padding dos inputs */
+        font-size: 14px; /* Diminui o tamanho da fonte dos inputs */
+    }
+
+    .login-btn {
+        padding: 12px; /* Ajusta o padding do botão de login */
+        font-size: 14px; /* Diminui o tamanho da fonte do botão de login */
+    }
+}
+
+/* Estilos para telas menores que 480px (smartphones) - index.css */
+@media (max-width: 480px) {
+    body {
+        /* Remove o height: 100vh para permitir rolagem se o conteúdo for maior */
+        height: auto;
+        min-height: 100vh; /* Garante que o gradiente cubra a tela mínima */
+        padding: 20px 0; /* Adiciona padding vertical */
+    }
+
+    .login-container {
+        box-shadow: none; /* Remove a sombra em telas muito pequenas para um visual mais limpo */
+        border-radius: 0; /* Remove o border-radius para ocupar toda a largura */
+        max-width: 100%; /* Garante que o container ocupe 100% da largura */
+    }
+
+    .logo h1 {
+        font-size: 22px; /* Diminui ainda mais o tamanho da fonte do título */
+    }
 }
