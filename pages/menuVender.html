@@ -1,321 +1,464 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venda seu carro | Webmotors</title>
-    <link rel="stylesheet" href="../src/assets/style.css">
-    <link rel="stylesheet" href="../src/assets/menuVender.css">
+    <link rel="stylesheet" href="../src/assets/style.css" />
+    <link rel="stylesheet" href="../src/assets/menuVender.css" />
+    <link rel="stylesheet" href="../src/assets/toast.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">
-                <a href="./home.html">
-                    <img src="../src/assets/img/logoCabecalho.png" alt="Webmotors">
-                </a>
-            </div>
-            
-            <!-- navbar conforme site original e funcional -->
-            <div class="links-nav">
-                <a href="../pages/home.html">Comprar</a>
-                <a href="../pages/menuVender.html">Vender</a>
-                <a href="../pages/servicos.html">Serviços</a>
-            </div>
-        
-            <div class="barra-direita">
-                <!--NÃO É POSSÍVEL-->
-                <!--Para armazenamento dos dados como senha e user, seria necesárop um banco no sistema-->
-                <!--Desta forma, o sistema de favoritos não é possível aplicar no momento também-->
-                <input type="search" placeholder="Busque por marca ou modelo">
-        
-                <!--Não é possível, pois teria que ter um banco criado para login-->
-                <button class="botao-login"><a href="../pages/minhaConta.html">Entrar</a></button>
-                <button class="favoritos">❤</button> <!--aba criados com base nas pesquisas salvas do cliente-->
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <a href="./home.html">
+            <img src="../src/assets/img/logoCabecalho.png" alt="Webmotors" />
+          </a>
+        </div>
+
+        <!-- navbar conforme site original e funcional -->
+        <div class="links-nav">
+          <a href="../pages/home.html">Comprar</a>
+          <a href="../pages/menuVender.html">Vender</a>
+          <a href="../pages/servicos.html">Serviços</a>
+        </div>
+
+        <div class="barra-direita">
+          <!--NÃO É POSSÍVEL-->
+          <!--Para armazenamento dos dados como senha e user, seria necesárop um banco no sistema-->
+          <!--Desta forma, o sistema de favoritos não é possível aplicar no momento também-->
+          <input type="search" placeholder="Busque por marca ou modelo" />
+
+          <!--Não é possível, pois teria que ter um banco criado para login-->
+          <button class="botao-login">
+            <a href="../pages/minhaConta.html">Entrar</a>
+          </button>
+          <button class="favoritos">❤</button>
+          <!--aba criados com base nas pesquisas salvas do cliente-->
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Vender carros é fácil e rápido com a maior audiência do Brasil</h1>
-            <p>Somos a plataforma automotiva com maior audiência do Brasil pra você anunciar seu carro. Não deixe pra depois!</p>
-            <small>Fonte: Similarweb | Audiência Plataforma automotiva Fev/24</small>
-            <div style="margin-top: 30px;">
-                <a id="anunciar" href="./home.html" class="btn-primary">Anunciar meu carro</a>
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="descontos">
-                <label for="descontos">Quero receber descontos, ofertas e informações.</label>
-            </div>
+      <div class="container">
+        <h1>Vender carros é fácil e rápido com a maior audiência do Brasil</h1>
+        <p>
+          Somos a plataforma automotiva com maior audiência do Brasil pra você
+          anunciar seu carro. Não deixe pra depois!
+        </p>
+        <small
+          >Fonte: Similarweb | Audiência Plataforma automotiva Fev/24</small
+        >
+        <div style="margin-top: 30px">
+          <a id="anunciar" href="./home.html" class="btn-primary"
+            >Anunciar meu carro</a
+          >
         </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="descontos" />
+          <label for="descontos"
+            >Quero receber descontos, ofertas e informações.</label
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Banner -->
     <section class="banner">
-        <div class="container">
-            <h2>Webmotors</h2>
-        </div>
+      <div class="container">
+        <h2>Webmotors</h2>
+      </div>
     </section>
 
     <!-- Razões para vender -->
     <section class="razoes">
-        <div class="container">
-            <h2>Motivos de sobra pra você vender seu carro aqui</h2>
-            <div class="razoes-grid">
-                <div class="razao-item">
-                    <h3>Milhões de compradores!</h3>
-                    <p>+ 33 milhões* de visitas por mês.</p>
-                </div>
-                <div class="razao-item">
-                    <h3>Planos pra todos os bolsos</h3>
-                    <p>Escolha o melhor plano para vender e parcele em até 10x.</p>
-                </div>
-                <div class="razao-item">
-                    <h3>Venda com o Financiamento Santander</h3>
-                    <p>Aproveite os melhores benefícios e venda financiado para pessoa física.</p>
-                </div>
-                <div class="razao-item">
-                    <h3>Prático, intuitivo e muito fácil!</h3>
-                    <p>Anuncie seu carro ou moto no site ou no App e ative seu anúncio em poucos passos.</p>
-                </div>
-            </div>
-            <div class="btn-center">
-                <a href="#" class="btn-primary">Vender meu carro</a>
-            </div>
-            <p class="fonte-pequena">33 milhões*: Média de visitas totais mensais no site e APP em 2024. Fonte: Dados internos (Adobe Analytics).</p>
+      <div class="container">
+        <h2>Motivos de sobra pra você vender seu carro aqui</h2>
+        <div class="razoes-grid">
+          <div class="razao-item">
+            <h3>Milhões de compradores!</h3>
+            <p>+ 33 milhões* de visitas por mês.</p>
+          </div>
+          <div class="razao-item">
+            <h3>Planos pra todos os bolsos</h3>
+            <p>Escolha o melhor plano para vender e parcele em até 10x.</p>
+          </div>
+          <div class="razao-item">
+            <h3>Venda com o Financiamento Santander</h3>
+            <p>
+              Aproveite os melhores benefícios e venda financiado para pessoa
+              física.
+            </p>
+          </div>
+          <div class="razao-item">
+            <h3>Prático, intuitivo e muito fácil!</h3>
+            <p>
+              Anuncie seu carro ou moto no site ou no App e ative seu anúncio em
+              poucos passos.
+            </p>
+          </div>
         </div>
+        <div class="btn-center">
+          <a href="#" class="btn-primary">Vender meu carro</a>
+        </div>
+        <p class="fonte-pequena">
+          33 milhões*: Média de visitas totais mensais no site e APP em 2024.
+          Fonte: Dados internos (Adobe Analytics).
+        </p>
+      </div>
     </section>
 
     <!-- Cards de dúvidas -->
     <section class="cards-section">
-        <div class="container">
-            <div class="cards-container">
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Tem dúvidas de como vender seu veículo rapidão?</h3>
-                        <p>Vem pra FAQ!</p>
-                        <a href="#" class="card-link">Acesse aqui →</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Dicas para vender meu carro ou moto com segurança</h3>
-                        <a href="#" class="card-link">Acesse aqui →</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-content">
+              <h3>Tem dúvidas de como vender seu veículo rapidão?</h3>
+              <p>Vem pra FAQ!</p>
+              <a href="#" class="card-link">Acesse aqui →</a>
             </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Dicas para vender meu carro ou moto com segurança</h3>
+              <a href="#" class="card-link">Acesse aqui →</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Video section -->
     <section class="video-section">
-        <div class="container">
-            <h2>Veja como vender seu carro na Webmotors</h2>
-            <p>Confira nossas dicas para criar um anúncio perfeito</p>
-            <div class="video-container">
-                <div class="video-placeholder">
-                    <img src="../src/assets/img/vazio.png" style="width: 45rem; height: 25rem; border-radius: 10px;" alt="Santander">
-                </div>
-            </div>
+      <div class="container">
+        <h2>Veja como vender seu carro na Webmotors</h2>
+        <p>Confira nossas dicas para criar um anúncio perfeito</p>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <img
+              src="../src/assets/img/vazio.png"
+              style="width: 45rem; height: 25rem; border-radius: 10px"
+              alt="Santander"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Info section -->
     <section class="razoes">
-        <div class="container">
-            <h2>Viu como é fácil anunciar seu carro?</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Temos mais algumas informações extras pra te ajudar a vender seu carro com tranquilidade</p>
-            <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">São poucos passos pra vender seu carro. Tá esperando o que? Vem anunciar na Webmotors!</p>
-            
-            <div style="text-align: center; margin-bottom: 40px;">
-                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-                    <div>Pra todos os bolsos</div>
-                    <div>Pra vender rápido</div>
-                    <div>Parcele em até 10x!</div>
-                </div>
-            </div>
+      <div class="container">
+        <h2>Viu como é fácil anunciar seu carro?</h2>
+        <p style="text-align: center; margin-bottom: 30px">
+          Temos mais algumas informações extras pra te ajudar a vender seu carro
+          com tranquilidade
+        </p>
+        <p style="text-align: center; font-weight: bold; margin-bottom: 40px">
+          São poucos passos pra vender seu carro. Tá esperando o que? Vem
+          anunciar na Webmotors!
+        </p>
+
+        <div style="text-align: center; margin-bottom: 40px">
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              margin-top: 20px;
+            "
+          >
+            <div>Pra todos os bolsos</div>
+            <div>Pra vender rápido</div>
+            <div>Parcele em até 10x!</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Como vender section -->
     <section class="como-vender">
-        <div class="container">
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Crie seu anúncio 100% online</h3>
-                    <p>Cause uma boa impressão! Preencha todos os dados e adicione fotos do veículo.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Defina um preço para o seu veículo</h3>
-                    <p>Consulte a Tabela Fipe e Webmotors e garanta que fará um bom negócio.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Combine via chat com o comprador</h3>
-                    <p>Receba mensagens e negocie a melhor oferta pelo nosso chat seguro!</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Fechou negócio? Dê sua opinião</h3>
-                    <p>Após concluir a venda, desative seu anúncio e avalie sua experiência.</p>
-                </div>
-            </div>
-            <div class="btn-center">
-                <a href="#" class="btn-primary">Criar meu anúncio</a>
-            </div>
+      <div class="container">
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Crie seu anúncio 100% online</h3>
+            <p>
+              Cause uma boa impressão! Preencha todos os dados e adicione fotos
+              do veículo.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Defina um preço para o seu veículo</h3>
+            <p>
+              Consulte a Tabela Fipe e Webmotors e garanta que fará um bom
+              negócio.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Combine via chat com o comprador</h3>
+            <p>
+              Receba mensagens e negocie a melhor oferta pelo nosso chat seguro!
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Fechou negócio? Dê sua opinião</h3>
+            <p>
+              Após concluir a venda, desative seu anúncio e avalie sua
+              experiência.
+            </p>
+          </div>
         </div>
+        <div class="btn-center">
+          <a href="#" class="btn-primary">Criar meu anúncio</a>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials">
-        <div class="container">
-            <h2>Opiniões de quem já vendeu por aqui</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>"Já vendi e comprei carros pela Webmotors. Tudo muito tranquilo e seguro."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Creio ser o melhor meio de anuncio automotivo."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Facilidade de pesquisa, alcance da publicação, possibilidade de financiar pelo Santander."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Tive experiência anterior na venda de um outro carro meu e foi muito rápido e descomplicado."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Facilidade de cadastro e informações mercadológicas sobre o preço praticado na minha cidade."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"O site é bem prático, bem fácil e é muito conhecido."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Fácil preenchimento, objetividade do site."</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Site seguro e de fácil utilização."</p>
-                </div>
-            </div>
-            <p class="fonte-testimonials">Comentários Internos. Fonte: NPS (Track.co) - Setembro 2023</p>
+      <div class="container">
+        <h2>Opiniões de quem já vendeu por aqui</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>
+              "Já vendi e comprei carros pela Webmotors. Tudo muito tranquilo e
+              seguro."
+            </p>
+          </div>
+          <div class="testimonial">
+            <p>"Creio ser o melhor meio de anuncio automotivo."</p>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Facilidade de pesquisa, alcance da publicação, possibilidade de
+              financiar pelo Santander."
+            </p>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Tive experiência anterior na venda de um outro carro meu e foi
+              muito rápido e descomplicado."
+            </p>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Facilidade de cadastro e informações mercadológicas sobre o preço
+              praticado na minha cidade."
+            </p>
+          </div>
+          <div class="testimonial">
+            <p>"O site é bem prático, bem fácil e é muito conhecido."</p>
+          </div>
+          <div class="testimonial">
+            <p>"Fácil preenchimento, objetividade do site."</p>
+          </div>
+          <div class="testimonial">
+            <p>"Site seguro e de fácil utilização."</p>
+          </div>
         </div>
+        <p class="fonte-testimonials">
+          Comentários Internos. Fonte: NPS (Track.co) - Setembro 2023
+        </p>
+      </div>
     </section>
 
     <!-- FAQ -->
     <section class="faq">
-        <div class="container">
-            <h2>Ainda com dúvidas relacionadas a vender na Webmotors?</h2>
-            <div class="faq-items">
-                <details class="faq-item">
-                    <summary>Por que a Webmotors é o melhor site para anunciar meu carro?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>O que é necessário para vender um carro usado?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Quanto custa para anunciar meu carro na Webmotors?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Quais as formas de pagamento do anúncio?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Quais tipos de carros podem ser anunciados na Webmotors?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Consigo anunciar meu carro 0km na Webmotors?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Posso anunciar meu carro com financiamento em andamento?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>O comprador do meu carro pode financiar meu veículo?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>O que acontece depois que eu anuncio meu carro na Webmotors?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Como vender meu carro rápido?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>Como evitar golpes durante a venda de carro?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-                <details class="faq-item">
-                    <summary>A Webmotors é segura?</summary>
-                    <p class="faq-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi veritatis soluta libero laborum? Pariatur doloremque dolor magnam sequi labore!</p>
-                </details>
-            </div>
+      <div class="container">
+        <h2>Ainda com dúvidas relacionadas a vender na Webmotors?</h2>
+        <div class="faq-items">
+          <details class="faq-item">
+            <summary>
+              Por que a Webmotors é o melhor site para anunciar meu carro?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>O que é necessário para vender um carro usado?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Quanto custa para anunciar meu carro na Webmotors?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Quais as formas de pagamento do anúncio?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Quais tipos de carros podem ser anunciados na Webmotors?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Consigo anunciar meu carro 0km na Webmotors?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Posso anunciar meu carro com financiamento em andamento?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              O comprador do meu carro pode financiar meu veículo?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              O que acontece depois que eu anuncio meu carro na Webmotors?
+            </summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Como vender meu carro rápido?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Como evitar golpes durante a venda de carro?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>A Webmotors é segura?</summary>
+            <p class="faq-descriptions">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              hic qui, esse voluptatum soluta ad et aperiam a. Ducimus excepturi
+              veritatis soluta libero laborum? Pariatur doloremque dolor magnam
+              sequi labore!
+            </p>
+          </details>
         </div>
+      </div>
     </section>
 
     <!-- Security section -->
     <section class="security">
-        <div class="container">
-            <div class="security-content">
-                <div class="security-item">
-                    <p>Na Webmotors, suas informações são criptografadas. Nenhum dado pessoal fornecido por você será usado para outros fins. A empresa preza por sua privacidade.</p>
-                </div>
-                <div class="security-item">
-                    <div class="payment-methods" id="payment-icon"></div>
-                    <p>Formas de pagamento</p>
-                    <p>Cartão de Crédito (até 10x s/ juros) e Boleto.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="security-content">
+          <div class="security-item">
+            <p>
+              Na Webmotors, suas informações são criptografadas. Nenhum dado
+              pessoal fornecido por você será usado para outros fins. A empresa
+              preza por sua privacidade.
+            </p>
+          </div>
+          <div class="security-item">
+            <div class="payment-methods" id="payment-icon"></div>
+            <p>Formas de pagamento</p>
+            <p>Cartão de Crédito (até 10x s/ juros) e Boleto.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--footer contendo todas informações dos alunos para identificação do projeto e também melhor legibilidade do site-->
     <footer class="footer-space">
-        <div class="footer-main-container">
-          <div class="footer-container">
-            <div class="devs">
-              <h2>Desenvolvedores:</h2>
-              <ul>
-                    <li>
-                        <a href="https://github.com/GabrielGVCB">
-                        <i class="fa-brands fa-github"></i>
-                        <span>Gabriel Batista</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/CSouzaCatolica">
-                        <i class="fa-brands fa-github"></i>
-                        <span>Gabriel Chiarelli</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MarceloSFH7">
-                        <i class="fa-brands fa-github"></i>
-                        <span>Marcelo Soares</span></a>
-                    </li>
-              </ul>
-            </div>
-            <div class="footer-box w-50">
-                <ul>
-                    <li><a href="#">Comprar</a></li>
-                    <li><a href="./menuVender.html">Vender</a></li>
-                    <li><a href="./servicos.html">Serviços</a></li>
-                </ul>
-            </div>
+      <div class="footer-main-container">
+        <div class="footer-container">
+          <div class="devs">
+            <h2>Desenvolvedores:</h2>
+            <ul>
+              <li>
+                <a href="https://github.com/GabrielGVCB">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Gabriel Batista</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/CSouzaCatolica">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Gabriel Chiarelli</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/MarceloSFH7">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Marcelo Soares</span></a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="footer-box w-100">
-            <p>Copyright © 2025. Todos os direitos reservados.</p>
+          <div class="footer-box w-50">
+            <ul>
+              <li><a href="#">Comprar</a></li>
+              <li><a href="./menuVender.html">Vender</a></li>
+              <li><a href="./servicos.html">Serviços</a></li>
+            </ul>
           </div>
         </div>
-      </footer>
-</body>
-<script src="../src/assets/script.js"></script>
+        <div class="footer-box w-100">
+          <p>Copyright © 2025. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../src/assets/script.js"></script>
 </html>
