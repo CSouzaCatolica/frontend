@@ -1,528 +1,553 @@
 /* Reset e estilos base */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-line-height: 1.6;
-background-color: #f4f4f4;
-color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 a {
-text-decoration: none;
-color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* Navbar hamburguer servicos */
 /* Dropdown básico */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
 }
 
 .links-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .dropdown-label {
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-    padding: 10px 0;
-    display: inline-block;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  padding: 10px 0;
+  display: inline-block;
 }
 
 .dropdown-toggle {
-    display: none;
+  display: none;
 }
 
 /* Submenu escondido por padrão */
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #f5f5f5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    top: 100%;
-    left: 0;
-    z-index: 2000;
+  display: none;
+  position: absolute;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  z-index: 2000;
 }
 
 .submenu li a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
 }
 
 .submenu li a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* Exibe submenu quando checkbox está marcado */
 .dropdown-toggle:checked + .dropdown-label + .submenu {
-    display: block;
+  display: block;
 }
 
 /* Hero Section */
 .hero {
-background-color: white;
-padding: 60px 0;
-text-align: center;
+  background-color: white;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .hero h1 {
-font-size: 32px;
-margin-bottom: 16px;
-max-width: 800px;
-margin: 0 auto 20px;
+  font-size: 32px;
+  margin-bottom: 16px;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
 .hero p {
-font-size: 18px;
-color: #666;
-max-width: 600px;
-margin: 0 auto 30px;
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
 
 .btn-primary {
-background-color: #f3123c;
-color: white;
-border: none;
-padding: 12px 24px;
-border-radius: 4px;
-font-size: 16px;
-font-weight: 500;
-cursor: pointer;
-display: inline-block;
-transition: background-color 0.2s;
+  background-color: #f3123c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s;
 }
 
 .btn-primary:hover {
-background-color: #d10e32;
+  background-color: #d10e32;
 }
 
 .checkbox-container {
-margin-top: 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 8px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Banner */
 .banner {
-background: linear-gradient(135deg, #f3123c, #ff5c7c);
-color: white;
-padding: 40px 0;
-text-align: center;
-margin: 40px 0;
+  background: linear-gradient(135deg, #f3123c, #ff5c7c);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin: 40px 0;
 }
 
 /* Razões para vender */
 .razoes {
-padding: 60px 0;
-background-color: white;
+  padding: 60px 0;
+  background-color: white;
 }
 
 .razoes h2 {
-text-align: center;
-margin-bottom: 40px;
-font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
 
 .razoes-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .razao-item {
-text-align: center;
-padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .razao-item h3 {
-font-size: 18px;
-margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .razao-item p {
-color: #666;
-font-size: 14px;
+  color: #666;
+  font-size: 14px;
 }
 
 .btn-center {
-text-align: center;
-margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .fonte-pequena {
-font-size: 12px;
-color: #999;
-text-align: center;
-margin-top: 20px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Cards de dúvidas */
 .cards-section {
-padding: 40px 0;
+  padding: 40px 0;
 }
 
 .cards-container {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
-background-color: white;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-width: calc(50% - 10px);
-display: flex;
-align-items: center;
-padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
 .card-content h3 {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .card-link {
-color: #f3123c;
-display: flex;
-align-items: center;
-gap: 5px;
-margin-top: 10px;
+  color: #f3123c;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 /* Video section */
 .video-section {
-background-color: white;
-padding: 60px 0;
-text-align: center;
+  background-color: white;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .video-container {
-max-width: 800px;
-margin: 0 auto;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-border-radius: 8px;
-overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-placeholder {
-background-color: #eee;
-height: 450px;
-display: flex;
-align-items: center;
-justify-content: center;
+  background-color: #eee;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*
 /* Como vender section */
 .como-vender {
-padding: 60px 0;
-background-color: #f9f9f9;
+  padding: 60px 0;
+  background-color: #f9f9f9;
 }
 
 .como-vender h2 {
-text-align: center;
-margin-bottom: 40px;
-font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
 
 .steps-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
-margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .step {
-width: calc(25% - 23px);
-background-color: white;
-border-radius: 8px;
-padding: 30px 20px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-text-align: center;
-position: relative;
+  width: calc(25% - 23px);
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
 }
 
 .step-number {
-position: absolute;
-top: -15px;
-left: 50%;
-transform: translateX(-50%);
-background-color: #f3123c;
-color: white;
-width: 30px;
-height: 30px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f3123c;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .step img {
-width: 50px;
-height: 50px;
-margin-bottom: 15px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
 }
 
 .step h3 {
-font-size: 16px;
-margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .step p {
-color: #666;
-font-size: 14px;
-} */
+  color: #666;
+  font-size: 14px;
+}
+*/
 
 /* Testimonials */
 .testimonials {
-padding: 60px 0;
-background-color: white;
+  padding: 60px 0;
+  background-color: white;
 }
 
 .testimonials h2 {
-text-align: center;
-margin-bottom: 40px;
-font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
 
 .testimonials-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .testimonial {
-background-color: #f9f9f9;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial p {
-font-style: italic;
-color: #555;
+  font-style: italic;
+  color: #555;
 }
 
 .fonte-testimonials {
-font-size: 12px;
-color: #999;
-text-align: center;
-margin-top: 30px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* FAQ */
 .faq {
-padding: 60px 0;
-background-color: #f9f9f9;
+  padding: 30px 0;
+  background-color: #f9f9f9;
 }
 
 .faq h2 {
-text-align: center;
-margin-bottom: 40px;
-font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
 }
 
 .faq-item {
-background-color: white;
-border-radius: 8px;
-padding: 16px 20px;
-margin-bottom: 12px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-cursor: pointer;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item summary {
+  width: 100%;
 }
 
 /* Seção de segurança */
 .security {
-background-color: white;
-padding: 40px 0;
-text-align: center;
-border-top: 1px solid #eee;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+  justify-content: center;
+  border-top: 1px solid #eee;
 }
 
 .security-content {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 40px;
-flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .security-item {
-max-width: 400px;
+  max-width: 400px;
 }
 
 .payment-methods {
-display: flex;
-gap: 10px;
-justify-content: center;
-margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .payment-icon {
-width: 40px;
-height: 25px;
-background-color: #eee;
-border-radius: 4px;
+  width: 40px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 4px;
 }
 
+.payment-icon-img{
+  width: 40px;
+  height: 25px;
+}
+
+.faq-descriptions {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
 /* ---------------------------------------------------------------------------------------------------- */
 /* Media Queries para Responsividade */
 /* ---------------------------------------------------------------------------------------------------- */
 
 /* Estilos para telas menores que 992px (laptops menores e tablets) - menuVender.css */
 @media (max-width: 992px) {
-    .razoes-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid para 2 colunas */
-        gap: 20px;
-    }
+  .razoes-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Ajusta o grid para 2 colunas */
+    gap: 20px;
+  }
 
-    .cards-container {
-        flex-direction: column; /* Empilha os cartões verticalmente */
-        align-items: center;
-    }
+  .cards-container {
+    flex-direction: column; /* Empilha os cartões verticalmente */
+    align-items: center;
+  }
 
-    .card {
-        width: 90%; /* Aumenta a largura dos cartões */
-        max-width: 500px; /* Limita a largura máxima */
-    }
+  .card {
+    width: 90%; /* Aumenta a largura dos cartões */
+    max-width: 500px; /* Limita a largura máxima */
+  }
 
-    .steps-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid de passos */
-        gap: 20px;
-    }
+  .steps-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Ajusta o grid de passos */
+    gap: 20px;
+  }
 
-    .step {
-        width: calc(50% - 15px); /* Dois passos por linha */
-    }
+  .step {
+    width: calc(50% - 15px); /* Dois passos por linha */
+  }
 
-    .testimonials-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta o grid de depoimentos */
-    }
+  .testimonials-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Ajusta o grid de depoimentos */
+  }
 
-    .video-placeholder {
-        height: 350px; /* Reduz a altura do placeholder do vídeo */
-    }
+  .video-placeholder {
+    height: 350px; /* Reduz a altura do placeholder do vídeo */
+  }
 }
 
 /* Estilos para telas menores que 768px (tablets e smartphones) - menuVender.css */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 28px; /* Diminui o tamanho da fonte do título hero */
-    }
+  .hero h1 {
+    font-size: 28px; /* Diminui o tamanho da fonte do título hero */
+  }
 
-    .hero p {
-        font-size: 16px; /* Diminui o tamanho da fonte do parágrafo hero */
-    }
+  .hero p {
+    font-size: 16px; /* Diminui o tamanho da fonte do parágrafo hero */
+  }
 
-    .razoes h2,
-    .video-section h2,
-    .como-vender h2,
-    .testimonials h2,
-    .faq h2 {
-        font-size: 24px; /* Diminui os títulos das seções */
-    }
+  .razoes h2,
+  .video-section h2,
+  .como-vender h2,
+  .testimonials h2,
+  .faq h2 {
+    font-size: 24px; /* Diminui os títulos das seções */
+  }
 
-    .razoes-grid,
-    .testimonials-grid,
-    .steps-container {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        gap: 20px;
-    }
+  .razoes-grid,
+  .testimonials-grid,
+  .steps-container {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 20px;
+  }
 
-    .step {
-        width: 100%; /* Ocupa toda a largura */
-    }
+  .step {
+    width: 100%; /* Ocupa toda a largura */
+  }
 
-    .video-placeholder {
-        height: 250px; /* Reduz ainda mais a altura do placeholder do vídeo */
-    }
+  .video-placeholder {
+    height: 250px; /* Reduz ainda mais a altura do placeholder do vídeo */
+  }
 
-    .security-content {
-        flex-direction: column; /* Empilha o conteúdo da seção de segurança */
-        gap: 20px;
-    }
+  .security-content {
+    flex-direction: column; /* Empilha o conteúdo da seção de segurança */
+    gap: 20px;
+  }
 
-    .security-item {
-        max-width: 90%; /* Ajusta a largura do item de segurança */
-    }
+  .security-item {
+    max-width: 90%; /* Ajusta a largura do item de segurança */
+  }
 }
 
 /* Estilos para telas menores que 480px (smartphones) - menuVender.css */
 @media (max-width: 480px) {
-    .hero {
-        padding: 40px 0; /* Reduz o padding da seção hero */
-    }
+  .hero {
+    padding: 40px 0; /* Reduz o padding da seção hero */
+  }
 
-    .hero h1 {
-        font-size: 22px; /* Diminui o tamanho da fonte do título hero */
-    }
+  .hero h1 {
+    font-size: 22px; /* Diminui o tamanho da fonte do título hero */
+  }
 
-    .hero p {
-        font-size: 14px; /* Diminui o tamanho da fonte do parágrafo hero */
-    }
+  .hero p {
+    font-size: 14px; /* Diminui o tamanho da fonte do parágrafo hero */
+  }
 
-    .btn-primary {
-        padding: 10px 20px; /* Ajusta o padding do botão primário */
-        font-size: 14px; /* Diminui o tamanho da fonte do botão primário */
-    }
+  .btn-primary {
+    padding: 10px 20px; /* Ajusta o padding do botão primário */
+    font-size: 14px; /* Diminui o tamanho da fonte do botão primário */
+  }
 
-    .razoes h2,
-    .video-section h2,
-    .como-vender h2,
-    .testimonials h2,
-    .faq h2 {
-        font-size: 20px; /* Diminui ainda mais os títulos das seções */
-    }
+  .razoes h2,
+  .video-section h2,
+  .como-vender h2,
+  .testimonials h2,
+  .faq h2 {
+    font-size: 20px; /* Diminui ainda mais os títulos das seções */
+  }
 
-    .card {
-        padding: 15px; /* Reduz o padding do cartão */
-    }
-    
-    .video-placeholder {
-        height: 180px; /* Mais uma redução na altura do placeholder do vídeo */
-    }
+  .card {
+    padding: 15px; /* Reduz o padding do cartão */
+  }
 
-    .faq-item {
-        font-size: 14px; /* Diminui o tamanho da fonte dos itens do FAQ */
-        padding: 12px 15px;
-    }
+  .video-placeholder {
+    height: 180px; /* Mais uma redução na altura do placeholder do vídeo */
+  }
+
+  .faq-item {
+    font-size: 14px; /* Diminui o tamanho da fonte dos itens do FAQ */
+    padding: 12px 15px;
+  }
 }
