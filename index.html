@@ -7,10 +7,12 @@
     <meta name="description" content="Webmotors - Compre e venda carros e motos com facilidade">
     <title>Login - Sistema</title>
     <link rel="stylesheet" href="./src/assets/index.css">
-    <link rel="stylesheet" href="../src/assets/toast.css">
+    <link rel="stylesheet" href="./src/assets/toast.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-    <div class="login-container toast-container">
+    <div class="toast-container"></div>
+    <div class="login-container">
         <div class="logo">
             <h1>WEB MOTORS - Login</h1>
         </div>
@@ -18,16 +20,16 @@
         <form id="loginForm">
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input id="email" name="email" placeholder="Digite seu e-mail">
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
             </div>
 
             <div class="form-group">
                 <label for="password">Senha:</label>
-                <input id="password" name="password" placeholder="Digite sua senha">
+                <input type="password" id="password" name="password" placeholder="Digite sua senha">
             </div>
 
             <button type="submit" class="login-btn" id="loginBtn">
-                <span class="loading" id="loading">
+                <span class="loading-icon-login" id="loading-icon-login">
                     <div class="spinner"></div>
                 </span>
                 <span id="btnText"><a href="./pages/home.html">Entrar</a></span>
@@ -36,4 +38,5 @@
         </div>
     </div>
 </body>
+<script src="./src/assets/login.js"></script>
 </html>

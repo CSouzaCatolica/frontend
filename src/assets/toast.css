@@ -4,7 +4,7 @@
 
 .toast-container {
   position: fixed;
-  top: 20px;
+  top: 40px;
   right: 20px;
   z-index: 10000;
   pointer-events: none;
@@ -556,6 +556,102 @@
   background: #d10e32;
   transform: translateY(-2px);
 }
+
+
+.item-acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-parcelas {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-parcelas:hover {
+  background: #0056b3;
+}
+
+.opcoes-extras {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.btn-avista {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-avista:hover {
+  background: #218838;
+}
+
+.modal-resumo-compra .modal-content {
+  max-width: 500px;
+}
+
+.item-resumo {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.total-compra {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+  text-align: right;
+  font-size: 18px;
+}
+
+.btn-confirmar {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-confirmar:hover {
+  background: #218838;
+}
+
+.btn-cancelar {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #545b62;
+}
+
+.preco-original {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
 
 /* ================================================================================================
    RESPONSIVIDADE

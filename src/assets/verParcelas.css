@@ -242,6 +242,57 @@ nav {
   }
 }
 
+.acoes-veiculo {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.btn-add-carrinho-parcelas,
+.btn-voltar {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-add-carrinho-parcelas {
+  background-color: #f3123c;
+  color: white;
+}
+
+.btn-add-carrinho-parcelas:hover {
+  background-color: #d10e35;
+  transform: translateY(-2px);
+}
+
+.btn-voltar {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-voltar:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.opcao-financiamento {
+  transition: all 0.3s ease;
+}
+
+.opcao-financiamento:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.cartao-veiculo::before{
+  content: none !important;
+}
 /* ---------------------------------------------------------------------------------------------------- */
 /* Media Queries para Responsividade */
 /* ---------------------------------------------------------------------------------------------------- */
