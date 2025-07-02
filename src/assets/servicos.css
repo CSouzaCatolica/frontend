@@ -1,0 +1,578 @@
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header e Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.links-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.links-nav a {
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.links-nav a:hover {
+  background-color: #f3123c;
+  color: white;
+}
+
+.barra-direita {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.barra-direita input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.botao-login {
+  background-color: #f3123c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-login:hover {
+  background-color: #d10e32;
+}
+
+.botao-login a {
+  color: white;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 60px 0;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #f3123c, #ff5c7c);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-card p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.service-features li {
+  color: #555;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f3123c;
+  font-weight: bold;
+}
+
+.service-btn {
+  background-color: #f3123c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s, transform 0.2s;
+  text-align: center;
+  width: 100%;
+}
+
+.service-btn:hover {
+  background-color: #d10e32;
+  transform: translateY(-2px);
+}
+
+/* Destaque para serviços específicos */
+#compra-venda {
+  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+  border: 2px solid #f3123c;
+}
+
+#financiamento {
+  background: linear-gradient(135deg, #fff8f0, #ffffff);
+}
+
+#seguro {
+  background: linear-gradient(135deg, #f0fff4, #ffffff);
+}
+
+#vistoria {
+  background: linear-gradient(135deg, #fff0f8, #ffffff);
+}
+
+#documentacao {
+  background: linear-gradient(135deg, #f0f8ff, #ffffff);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f3123c, #ff5c7c);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin: 40px 0;
+  border-radius: 12px;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #f3123c;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: white;
+  padding: 60px 0;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #333;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item details {
+  background-color: white;
+}
+
+.faq-item summary {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.faq-item summary:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-item[open] summary {
+  background-color: #f3123c;
+  color: white;
+}
+
+.faq-answer {
+  padding: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Footer Styles */
+.footer-space {
+  background-color: #333;
+  color: white;
+  padding: 40px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.devs h2 {
+  margin-bottom: 20px;
+  color: #f3123c;
+}
+
+.devs ul {
+  list-style: none;
+}
+
+.devs li {
+  margin-bottom: 10px;
+}
+
+.devs a {
+  color: #ccc;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.devs a:hover {
+  color: white;
+}
+
+.footer-box ul {
+  list-style: none;
+}
+
+.footer-box li {
+  margin-bottom: 8px;
+}
+
+.footer-box a {
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.footer-box a:hover {
+  color: white;
+}
+
+.w-100 {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #555;
+  padding-top: 20px;
+}
+
+.w-100 p {
+  color: #999;
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* Media Queries para Responsividade */
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* Estilos para telas menores que 992px (laptops menores e tablets) */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .links-nav {
+    gap: 20px;
+  }
+
+  .barra-direita {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barra-direita input {
+    width: 200px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .cta-section {
+    padding: 40px 0;
+    margin: 30px 0;
+  }
+
+  .cta-section h2 {
+    font-size: 24px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+  }
+
+  .faq-section {
+    padding: 40px 0;
+    margin: 30px 0;
+  }
+
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estilos para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  .links-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links-nav a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .barra-direita input {
+    width: 180px;
+    padding: 6px 10px;
+  }
+
+  .botao-login {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .services-grid {
+    padding: 20px 0;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-icon {
+    font-size: 36px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .service-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .cta-section {
+    padding: 30px 0;
+    margin: 20px 0;
+  }
+
+  .cta-section h2 {
+    font-size: 20px;
+  }
+
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .faq-section {
+    padding: 30px 0;
+    margin: 20px 0;
+  }
+
+  .faq-section h2 {
+    font-size: 20px;
+  }
+
+  .faq-item summary {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .footer-space {
+    padding: 30px 0 15px;
+  }
+
+  .devs h2 {
+    font-size: 18px;
+  }
+}
+
+/* Animações adicionais */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }

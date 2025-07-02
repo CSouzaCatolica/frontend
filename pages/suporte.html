@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3123c">
+    <meta name="description" content="Central de Suporte Webmotors - Tire suas dúvidas e encontre ajuda">
+    <title>Suporte - Webmotors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../src/assets/suporte.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <nav>
+        <div class="logo">
+          <a href="home.html">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Ctext x='10' y='25' font-family='Arial, sans-serif' font-size='20' font-weight='bold' fill='%23f3123c'%3EWebmotors%3C/text%3E%3C/svg%3E" alt="Webmotors" />
+          </a>
+        </div>
+        <div class="links-nav">
+          <a href="home.html">Comprar</a>
+          <a href="menuVender.html">Vender</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="suporte.html" style="background-color: #f3123c; color: white;">Suporte</a>
+        </div>
+        <div class="barra-direita">
+          <input type="search" placeholder="Busque por marca ou modelo" />
+          <button class="botao-login">
+            <a href="minhaConta.html">Entrar</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="support-hero">
+      <div class="container">
+        <h1>Central de Suporte</h1>
+        <p>Estamos aqui para ajudar você a resolver qualquer dúvida ou problema</p>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="container">
+      <div class="support-search">
+        <div class="search-box">
+          <input type="text" placeholder="Digite sua dúvida ou problema..." id="searchInput">
+          <button type="button" onclick="searchHelp()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="popular-searches">
+          <span>Buscas populares:</span>
+          <span class="popular-tag" onclick="setSearch('como vender')">Como vender</span>
+          <span class="popular-tag" onclick="setSearch('financiamento')">Financiamento</span>
+          <span class="popular-tag" onclick="setSearch('documentos')">Documentos</span>
+          <span class="popular-tag" onclick="setSearch('conta')">Minha conta</span>
+          <span class="popular-tag" onclick="setSearch('seguro')">Seguro</span>
+        </div>
+      </div>
+
+      <!-- Quick Help Categories -->
+      <section class="quick-help">
+        <h2 class="section-title">Como podemos ajudar?</h2>
+        <div class="help-categories">
+          <div class="help-card" onclick="showToast('Seção de Compra em desenvolvimento')">
+            <i class="fas fa-car help-icon"></i>
+            <h3>Comprar Veículo</h3>
+            <p>Dúvidas sobre como encontrar, avaliar e comprar seu veículo ideal</p>
+          </div>
+          
+          <div class="help-card" onclick="showToast('Seção de Venda em desenvolvimento')">
+            <i class="fas fa-hand-holding-usd help-icon"></i>
+            <h3>Vender Veículo</h3>
+            <p>Aprenda como anunciar e vender seu veículo da melhor forma</p>
+          </div>
+          
+          <div class="help-card" onclick="showToast('Seção de Financiamento em desenvolvimento')">
+            <i class="fas fa-credit-card help-icon"></i>
+            <h3>Financiamento</h3>
+            <p>Tire dúvidas sobre simulação, aprovação e documentação</p>
+          </div>
+          
+          <div class="help-card" onclick="showToast('Seção de Conta em desenvolvimento')">
+            <i class="fas fa-user-circle help-icon"></i>
+            <h3>Minha Conta</h3>
+            <p>Problemas com login, senha ou dados pessoais</p>
+          </div>
+          
+          <div class="help-card" onclick="showToast('Seção de Documentos em desenvolvimento')">
+            <i class="fas fa-file-alt help-icon"></i>
+            <h3>Documentação</h3>
+            <p>Ajuda com transferência, licenciamento e outros documentos</p>
+          </div>
+          
+          <div class="help-card" onclick="showToast('Seção de Segurança em desenvolvimento')">
+            <i class="fas fa-shield-alt help-icon"></i>
+            <h3>Segurança</h3>
+            <p>Dicas de segurança e como evitar golpes</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="faq-container">
+          <h2 class="section-title">Perguntas Frequentes</h2>
+          
+          <div class="faq-item">
+            <details>
+              <summary>Como faço para anunciar meu veículo?</summary>
+              <div class="faq-answer">
+                Para anunciar seu veículo, acesse a seção "Vender", clique em "Anunciar Grátis", preencha todas as informações do seu veículo, adicione fotos de qualidade e publique. O anúncio básico é gratuito para pessoas físicas.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>É seguro comprar pela plataforma?</summary>
+              <div class="faq-answer">
+                Sim! Todos os anúncios passam por verificação. Recomendamos sempre verificar a documentação, fazer vistoria técnica e, se possível, acompanhar a transferência. Oferecemos serviços de vistoria e documentação para maior segurança.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>Como funciona o financiamento?</summary>
+              <div class="faq-answer">
+                Temos parcerias com os principais bancos. Você pode fazer uma simulação online gratuita, enviando seus dados básicos. A aprovação acontece em até 24 horas, com possibilidade de financiamento até 100% do valor em até 60 parcelas.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>Posso alterar ou excluir meu anúncio?</summary>
+              <div class="faq-answer">
+                Sim! Acesse "Minha Conta", vá em "Meus Anúncios" e você poderá editar informações, adicionar/remover fotos, alterar preço ou excluir o anúncio completamente a qualquer momento.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>Vocês oferecem vistoria do veículo?</summary>
+              <div class="faq-answer">
+                Sim! Oferecemos vistoria técnica completa em mais de 150 pontos, com certificado digital, histórico de acidentes e verificação de documentos. Você pode agendar online e receber o laudo em poucos dias.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-item">
+            <details>
+              <summary>Como entro em contato com o vendedor?</summary>
+              <div class="faq-answer">
+                No anúncio do veículo, você encontrará as opções de contato: telefone, WhatsApp e chat interno. Recomendamos usar nosso chat interno para maior segurança e histórico das conversas.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container">
+          <h2>Ainda precisa de ajuda?</h2>
+          <p>Nossa equipe está pronta para atender você através dos canais abaixo</p>
+          
+          <div class="contact-methods">
+            <div class="contact-card" onclick="showToast('Redirecionando para WhatsApp...')">
+              <i class="fab fa-whatsapp"></i>
+              <h4>WhatsApp</h4>
+              <p>Atendimento rápido<br>Segunda a Sexta, 8h às 18h</p>
+            </div>
+            
+            <div class="contact-card" onclick="showToast('Abrindo chat online...')">
+              <i class="fas fa-comments"></i>
+              <h4>Chat Online</h4>
+              <p>Suporte em tempo real<br>Segunda a Sexta, 8h às 18h</p>
+            </div>
+            
+            <div class="contact-card" onclick="showToast('Abrindo formulário de e-mail...')">
+              <i class="fas fa-envelope"></i>
+              <h4>E-mail</h4>
+              <p>Resposta em até 24h<br>suporte@webmotors.com</p>
+            </div>
+            
+            <div class="contact-card" onclick="showToast('Função de telefone não disponível')">
+              <i class="fas fa-phone"></i>
+              <h4>Telefone</h4>
+              <p>Central de Atendimento<br>0800 123 4567</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-space">
+      <div class="footer-main-container">
+        <div class="footer-container">
+          <div class="devs">
+            <h2>Desenvolvedores:</h2>
+            <ul>
+              <li>
+                <a href="https://github.com/GabrielGVCB">
+                  <i class="fab fa-github"></i>
+                  <span>Gabriel Batista</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/CSouzaCatolica">
+                  <i class="fab fa-github"></i>
+                  <span>Gabriel Chiarelli</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/MarceloSFH7">
+                  <i class="fab fa-github"></i>
+                  <span>Marcelo Soares</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-box">
+            <ul>
+              <li><a href="#">Comprar</a></li>
+              <li><a href="menuVender.html">Vender</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="suporte.html">Suporte</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-100">
+          <p>Copyright © 2025. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" style="position: fixed; top: 20px; right: 20px; background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); border-left: 4px solid #f3123c; z-index: 10000; transform: translateX(400px); transition: transform 0.3s ease; font-weight: 500;">
+      <span id="toastMessage"></span>
+    </div>
+
+    <script script="../src/assets/suporte.js"></script>
+  </body>
+</html>
