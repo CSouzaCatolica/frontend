@@ -245,69 +245,35 @@ main {
 .ver-parcelas:hover {
     background: #1a1921;
 }
-
 /* Footer */
 .footer-space {
-    width: 100%;
-    max-width: 1200px;
-    margin: 64px auto 24px;
-    padding-top: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: rgba(255,255,255,0.1) solid 1px;
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
 }
 
 .footer-main-container {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    background-color: #181818;
-    color: white;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
-    padding: 24px;
-    border-bottom: 1px solid #333;
-}
-
-.footer-box {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px;
-    color: white;
-}
-
-.footer-box p {
-    margin-bottom: 8px;
-    color: #ccc;
-    text-align: center;
-    text-justify: center;
-}
-
-.devs {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: white;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .devs h2 {
+    color: #f3123c;
+    margin-bottom: 15px;
     font-size: 18px;
-    margin-bottom: 8px;
-    color: white;
 }
 
 .devs ul {
@@ -319,16 +285,46 @@ main {
 }
 
 .devs a {
+    color: #bdc3c7;
     text-decoration: none;
-    color: white;
-    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
 }
 
 .devs a:hover {
-    color: #ccc;
-    text-decoration: underline;
+    color: white;
 }
 
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box li {
+    margin-bottom: 8px;
+}
+
+.footer-box a {
+    color: #bdc3c7;
+    transition: color 0.3s;
+}
+
+.footer-box a:hover {
+    color: white;
+}
+
+.w-100 {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+.w-100 p {
+    color: #999;
+    font-size: 14px;
+}
 /* ---------------------------------------------------------------------------------------------------- */
 /* Media Queries para Responsividade */
 /* ---------------------------------------------------------------------------------------------------- */
