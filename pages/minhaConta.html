@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f3123c">
-    <meta name="description" content="Webmotors - Compre e venda carros e motos com facilidade">
+    <meta name="theme-color" content="#f3123c" />
+    <meta
+      name="description"
+      content="Webmotors - Compre e venda carros e motos com facilidade"
+    />
     <title>Minha Conta</title>
-    <link rel="stylesheet" href="../src/assets/style.css" />
+    <!-- <link rel="stylesheet" href="../src/assets/style.css" /> -->
     <link rel="stylesheet" href="../src/assets/minhaConta.css" />
     <link rel="stylesheet" href="../src/assets/toast.css" />
   </head>
@@ -22,40 +25,309 @@
       </nav>
     </header>
 
-    <!-- Conteúdo principal -->
-    <main class="minha-conta-container">
-      <section class="minha-conta-header">
-        <div class="foto-usuario">
-          <img src="../src/assets/img/userSouth.png" alt="Foto do usuário" />
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar slide-in-left">
+        <div class="profile-section">
+          <div class="profile-avatar" onclick="openModal('avatarModal')">
+            <img src="../src/assets/img/userSouth.png" alt="Foto do usuário" />
+            <div class="edit-overlay">
+              <i class="fas fa-camera"></i>
+            </div>
+          </div>
+          <div class="profile-name">Roger Knela Seka</div>
+          <div class="profile-status">
+            <div class="status-dot"></div>
+            Conta Ativa
+          </div>
         </div>
-        <div class="info-usuario">
-          <h1>Roger Knela Seka</h1>
-          <span class="status-usuario">Ativo</span>
-        </div>
-      </section>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#" class="active" onclick="showSection('overview')"
+              ><i class="fas fa-tachometer-alt"></i> Visão Geral</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showSection('personal')"
+              ><i class="fas fa-user"></i> Dados Pessoais</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showSection('vehicles')"
+              ><i class="fas fa-car"></i> Meus Veículos</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showSection('security')"
+              ><i class="fas fa-shield-alt"></i> Segurança</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showSection('support')"
+              ><i class="fas fa-headset"></i> Suporte</a
+            >
+          </li>
+        </ul>
+      </aside>
 
-      <section class="dados-pessoais">
-        <h2>Identificação</h2>
-        <p><strong>Data de nascimento:</strong> 09/05/2006</p>
-        <p><strong>Estado natal:</strong> SC</p>
-        <p><strong>Naturalidade:</strong> Joinville</p>
-        <h2>Contato</h2>
-        <div class="contato-info">
-          <div>
-            <strong>E-mail:</strong>
-            <p>RogerKnelaSeka@gmail.com</p>
+      <!-- Conteúdo principal -->
+      <main class="content-area fade-in">
+        <!-- Seção Overview -->
+        <div id="overview-section" class="content-section">
+          <div class="content-header">
+            <h1 class="content-title">Bem-vindo de volta, Roger!</h1>
+            <p class="content-subtitle">
+              Aqui está um resumo da sua conta e atividades recentes
+            </p>
           </div>
-          <div>
-            <strong>Residencial:</strong>
-            <p>-</p>
-          </div>
-          <div>
-            <strong>Celular:</strong>
-            <p>(47) 99111-2222</p>
+          <div class="content-body">
+            <!-- Cards de estatísticas -->
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-card-icon">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="info-card-title">Veículos Cadastrados</div>
+                <div class="info-card-value">3</div>
+              </div>
+              <div class="info-card">
+                <div class="info-card-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div class="info-card-title">Favoritos</div>
+                <div class="info-card-value">12</div>
+              </div>
+              <div class="info-card">
+                <div class="info-card-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="info-card-title">Visualizações</div>
+                <div class="info-card-value">247</div>
+              </div>
+            </div>
+
+            <!-- Atividades recentes -->
+            <div class="data-section">
+              <h3 class="section-title">
+                <i class="fas fa-clock"></i>
+                Atividades Recentes
+              </h3>
+              <div class="data-grid">
+                <div class="data-item">
+                  <div class="data-label">Última visualização</div>
+                  <div class="data-value">Honda Civic 2022</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Último login</div>
+                  <div class="data-value">Hoje às 14:32</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Anúncio mais visto</div>
+                  <div class="data-value">Toyota Corolla 2021</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <!-- Seção Dados Pessoais -->
+        <div
+          id="personal-section"
+          class="content-section"
+          style="display: none"
+        >
+          <div class="content-header">
+            <h1 class="content-title">Dados Pessoais</h1>
+            <p class="content-subtitle">
+              Gerencie suas informações pessoais e de contato
+            </p>
+          </div>
+          <div class="content-body">
+            <!-- Identificação -->
+            <div class="data-section">
+              <h3 class="section-title">
+                <i class="fas fa-id-card"></i>
+                Identificação
+              </h3>
+              <div class="data-grid">
+                <div class="data-item">
+                  <div class="data-label">Nome completo</div>
+                  <div class="data-value">Roger Knela Seka</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Data de nascimento</div>
+                  <div class="data-value">09/05/2006</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Estado natal</div>
+                  <div class="data-value">Santa Catarina</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Naturalidade</div>
+                  <div class="data-value">Joinville</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">CPF</div>
+                  <div class="data-value">***.***.***-**</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">RG</div>
+                  <div class="data-value">**.***.**-*</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contato -->
+            <div class="data-section">
+              <h3 class="section-title">
+                <i class="fas fa-phone"></i>
+                Informações de Contato
+              </h3>
+              <div class="data-grid">
+                <div class="data-item">
+                  <div class="data-label">E-mail principal</div>
+                  <div class="data-value">RogerKnelaSeka@gmail.com</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Celular</div>
+                  <div class="data-value">(47) 99111-2222</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Telefone residencial</div>
+                  <div class="data-value">Não informado</div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">Endereço</div>
+                  <div class="data-value">
+                    Rua das Flores, 123 - Joinville/SC
+                  </div>
+                </div>
+                <div class="data-item">
+                  <div class="data-label">CEP</div>
+                  <div class="data-value">89202-000</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-primary" onclick="openModal('editModal')">
+                <i class="fas fa-edit"></i>
+                Editar Informações
+              </button>
+              <button
+                class="btn btn-secondary"
+                onclick="showToast('Dados exportados com sucesso!')"
+              >
+                <i class="fas fa-download"></i>
+                Exportar Dados
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outras seções serão adicionadas dinamicamente -->
+        <div
+          id="vehicles-section"
+          class="content-section"
+          style="display: none"
+        >
+          <div class="content-header">
+            <h1 class="content-title">Meus Veículos</h1>
+            <p class="content-subtitle">Gerencie seus anúncios de veículos</p>
+          </div>
+          <div class="content-body">
+            <p>Você ainda não possui nenhum veiculo comprado!</p>
+          </div>
+        </div>
+
+        <div
+          id="security-section"
+          class="content-section"
+          style="display: none"
+        >
+          <div class="content-header">
+            <h1 class="content-title">Segurança</h1>
+            <p class="content-subtitle">Configurações de segurança da conta</p>
+          </div>
+          <div class="content-body">
+            <p>Seção em desenvolvimento...</p>
+          </div>
+        </div>
+
+        <div id="support-section" class="content-section" style="display: none">
+          <div class="content-header">
+            <h1 class="content-title">Suporte</h1>
+            <p class="content-subtitle">Central de ajuda e contato</p>
+          </div>
+          <div class="content-body">
+            <p>Carregando...</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal para edição -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('editModal')">
+          &times;
+        </button>
+        <h2>Editar Informações Pessoais</h2>
+        <form id="editForm">
+          <div class="form-group">
+            <label>Nome completo</label>
+            <input type="text" value="Roger Knela Seka" />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" value="RogerKnelaSeka@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label>Celular</label>
+            <input type="tel" value="(47) 99111-2222" />
+          </div>
+          <div class="action-buttons">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i>
+              Salvar Alterações
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeModal('editModal')"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para avatar -->
+    <div id="avatarModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('avatarModal')">
+          &times;
+        </button>
+        <h2>Alterar Foto do Perfil</h2>
+        <div style="text-align: center; padding: 20px">
+          <input type="file" accept="image/*" style="margin-bottom: 20px" />
+          <div class="action-buttons" style="justify-content: center">
+            <button class="btn btn-primary">
+              <i class="fas fa-upload"></i>
+              Fazer Upload
+            </button>
+            <button
+              class="btn btn-secondary"
+              onclick="closeModal('avatarModal')"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--footer contendo todas informações dos alunos para identificação do projeto e também melhor legibilidade do site-->
     <footer class="footer-space">
       <div class="footer-main-container">
@@ -84,4 +356,6 @@
       </div>
     </footer>
   </body>
+  <script src="../src/assets/script.js"></script>
+  <script src="../src/assets/minhaConta.js"></script>
 </html>
