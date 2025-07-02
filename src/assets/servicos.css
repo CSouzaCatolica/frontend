@@ -292,18 +292,20 @@ nav {
   line-height: 1.6;
 }
 
-/* Footer Styles */
+/* Footer */
 .footer-space {
-  background-color: #333;
+  background: #2c3e50;
   color: white;
   padding: 40px 0 20px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .footer-main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-container {
@@ -316,8 +318,9 @@ nav {
 }
 
 .devs h2 {
-  margin-bottom: 20px;
   color: #f3123c;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .devs ul {
@@ -325,15 +328,16 @@ nav {
 }
 
 .devs li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .devs a {
-  color: #ccc;
-  transition: color 0.2s;
+  color: #bdc3c7;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: color 0.3s;
 }
 
 .devs a:hover {
@@ -349,8 +353,8 @@ nav {
 }
 
 .footer-box a {
-  color: #ccc;
-  transition: color 0.2s;
+  color: #bdc3c7;
+  transition: color 0.3s;
 }
 
 .footer-box a:hover {
@@ -368,7 +372,6 @@ nav {
   color: #999;
   font-size: 14px;
 }
-
 /* ---------------------------------------------------------------------------------------------------- */
 /* Media Queries para Responsividade */
 /* ---------------------------------------------------------------------------------------------------- */
