@@ -91,7 +91,7 @@ class GerenciadorConta {
       cep: '89202-000',
       estadoNatal: 'Santa Catarina',
       naturalidade: 'Joinville',
-      avatar: '../src/assets/img/userSouth.png',
+      avatar: '../src/assets/img/userProfile.jpg',
       contaAtiva: true,
       ultimoLogin: 'Hoje às 14:32',
       veiculosCadastrados: 3,
