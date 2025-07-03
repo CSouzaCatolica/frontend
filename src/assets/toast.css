@@ -1,7 +1,3 @@
-/* ================================================================================================
-   SISTEMA DE TOAST MELHORADO
-================================================================================================ */
-
 .toast-container {
   position: fixed;
   top: 40px;
@@ -348,13 +344,17 @@
 }
 
 .cartao-veiculo::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(243, 18, 60, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    45deg,
+    rgba(243, 18, 60, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -557,7 +557,6 @@
   transform: translateY(-2px);
 }
 
-
 .item-acoes {
   display: flex;
   gap: 8px;
@@ -652,7 +651,6 @@
   margin: 0;
 }
 
-
 /* ================================================================================================
    RESPONSIVIDADE
 ================================================================================================ */
@@ -714,7 +712,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -723,10 +722,15 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
-  40%, 43% {
+  40%,
+  43% {
     transform: translate3d(0, -30px, 0);
   }
   70% {
@@ -756,13 +760,18 @@
 }
 
 .botao-filtro::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -821,7 +830,7 @@
   background: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .grupo-filtro {
@@ -855,7 +864,6 @@
   border-color: #f3123c;
 }
 
-/* Ordenação */
 .ordenacao {
   margin-top: 20px;
 }
@@ -880,7 +888,6 @@
   border-color: #f3123c;
 }
 
-/* Modais melhorados */
 .modal-favoritos,
 .modal-parcelas,
 .modal-carrinho {
@@ -911,7 +918,7 @@
   width: 90%;
   max-height: 80vh;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transform: scale(0.9);
   transition: transform 0.3s ease;
 }
@@ -950,7 +957,7 @@
 }
 
 .btn-fechar:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .modal-body {
@@ -965,7 +972,6 @@
   background: #f8f9fa;
 }
 
-/* Itens dos modais */
 .item-favorito,
 .item-carrinho {
   display: flex;
@@ -980,7 +986,7 @@
 
 .item-favorito:hover,
 .item-carrinho:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
@@ -1021,7 +1027,6 @@
   flex-direction: column;
 }
 
-/* Botões dos modais */
 .btn-add-carrinho,
 .btn-remover-fav,
 .btn-remover {
@@ -1053,7 +1058,6 @@
   background: #c82333;
 }
 
-/* Estados vazios */
 .favoritos-vazio,
 .carrinho-vazio {
   text-align: center;
@@ -1064,7 +1068,6 @@
   border: 2px dashed #ddd;
 }
 
-/* Botões de ação do footer */
 .acoes {
   display: flex;
   gap: 15px;
@@ -1107,7 +1110,6 @@
   opacity: 0.6;
 }
 
-/* Botão de carrinho modular */
 .btn-carrinho-modular {
   background: #f3123c;
   color: white;
@@ -1129,7 +1131,6 @@
   transform: translateY(-2px);
 }
 
-/* Correção para botões de favoritos */
 .btn-favorito.ativo {
   background: #f3123c;
   color: white;
@@ -1140,32 +1141,31 @@
   color: white;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .modal-content {
     width: 95%;
     margin: 10px;
   }
-  
+
   .grupo-filtro {
     flex-direction: column;
   }
-  
+
   .botao-filtro {
     justify-content: center;
   }
-  
+
   .item-favorito,
   .item-carrinho {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .item-acoes {
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .acoes {
     flex-direction: column;
   }

@@ -123,7 +123,7 @@ const BANCO_VEICULOS = [
     }
 ]
 // ################################################################################
-//                          SISTEMA DE TOAST MELHORADO
+//                          TOAST 
 // ################################################################################
 function toast(mensagem, tipo = 'info', duracao = 3000) {
     const existingToasts = document.querySelectorAll('.toast')
@@ -171,7 +171,7 @@ function createToastContainer() {
 }
 
 // ################################################################################
-//                          SISTEMA DE RENDERIZAÇÃO DE VEÍCULOS
+//                          SISTEMA DE VEÍCULOS
 // ################################################################################
 
 class GerenciadorVeiculos {
@@ -395,7 +395,7 @@ class GerenciadorVeiculos {
 }
 
 // ################################################################################
-//                          SISTEMA DE CARRINHO MELHORADO
+//                                CARRINHO
 // ################################################################################
 
 class CarrinhoCompras {
@@ -554,7 +554,6 @@ class CarrinhoCompras {
             }).join('')
             : '<p class="carrinho-vazio">Seu carrinho está vazio</p>'
 
-        // Calcular total considerando parcelas
         const totalCalculado = this.calcularTotalComParcelas()
 
         modal.innerHTML = `
@@ -602,7 +601,6 @@ class CarrinhoCompras {
             return
         }
 
-        // Criar resumo da compra
         const resumoCompra = this.itens.map(item => {
             const parcela = this.obterParcelaItem(item.id)
             return {
@@ -616,7 +614,6 @@ class CarrinhoCompras {
 
         toast(`Processando compra de ${this.itens.length} veículo(s)...`, 'info', 2000)
 
-        // Simular processamento
         setTimeout(() => {
             this.mostrarResumoCompra(resumoCompra, total)
         }, 2000)
@@ -682,7 +679,7 @@ class CarrinhoCompras {
 }
 
 // ################################################################################
-//                          SISTEMA DE FAVORITOS MELHORADO
+//                             FAVORITOS
 // ################################################################################
 class SistemaFavoritos {
     constructor() {
@@ -866,7 +863,7 @@ class SistemaFavoritos {
 }
 
 // ################################################################################
-//                          SISTEMA DE FILTROS MELHORADO
+//                          FILTROS
 // ################################################################################
 
 class SistemaFiltros {
@@ -952,7 +949,7 @@ class SistemaFiltros {
 }
 
 // ################################################################################
-//                          SISTEMA DE PARCELAS MELHORADO
+//                              PARCELAS
 // ################################################################################
 
 function mostrarParcelas(veiculo) {
@@ -1060,7 +1057,7 @@ function mostrarParcelasCarrinho(veiculoId) {
 }
 
 // ################################################################################
-//                          SISTEMA PARA PÁGINA DE PARCELAS ESPECÍFICA
+//                          PÁGINA DE PARCELAS
 // ################################################################################
 
 function inicializarPaginaParcelas() {
@@ -1075,15 +1072,12 @@ function inicializarPaginaParcelas() {
 
     const veiculo = JSON.parse(veiculoData)
 
-    // Atualizar informações da página com dados do veículo
     atualizarDadosPagina(veiculo)
 
-    // Configurar botões de ação
     configurarBotoesPaginaParcelas(veiculo)
 }
 
 function atualizarDadosPagina(veiculo) {
-    // Atualizar título se necessário
     const titulo = document.querySelector('h1')
     if (titulo && veiculo.nome !== 'PORSCHE 911') {
         titulo.innerHTML = veiculo.nome.split(' ').map((palavra, index) =>
@@ -1091,13 +1085,11 @@ function atualizarDadosPagina(veiculo) {
         ).join(' ')
     }
 
-    // Atualizar preço
     const precoElement = document.querySelector('.preco-grande')
     if (precoElement) {
         precoElement.textContent = `R$ ${veiculo.preco.toLocaleString('pt-BR')}`
     }
 
-    // Atualizar descrição
     const descricaoElement = document.querySelector('.subtitulo')
     if (descricaoElement) {
         descricaoElement.textContent = veiculo.descricao
@@ -1105,7 +1097,6 @@ function atualizarDadosPagina(veiculo) {
 }
 
 function configurarBotoesPaginaParcelas(veiculo) {
-    // Adicionar botão para adicionar ao carrinho
     const simulacaoContainer = document.querySelector('.simulacao-financiamento')
     if (simulacaoContainer) {
         const botoesContainer = document.createElement('div')
@@ -1121,7 +1112,6 @@ function configurarBotoesPaginaParcelas(veiculo) {
         simulacaoContainer.appendChild(botoesContainer)
     }
 
-    // Configurar botões de financiamento
     const botoesFinanciamento = document.querySelectorAll('.opcao-financiamento')
     botoesFinanciamento.forEach((opcao, index) => {
         opcao.style.cursor = 'pointer'
@@ -1141,10 +1131,8 @@ function selecionarOpcaoFinanciamento(veiculo, opcaoIndex) {
     const opcaoSelecionada = opcoes[opcaoIndex]
     const entrada = veiculo.preco * opcaoSelecionada.entrada
 
-    // Calcular valor total (entrada + parcelas)
     const valorTotal = entrada + (opcaoSelecionada.valorParcela * opcaoSelecionada.parcelas)
 
-    // Adicionar ao carrinho com informações de parcela
     const adicionado = carrinho.adicionarItem(veiculo)
 
     if (adicionado) {
@@ -1199,11 +1187,9 @@ document.addEventListener('DOMContentLoaded', () => {
     carrinho = new CarrinhoCompras()
     favoritos = new SistemaFavoritos()
 
-    // Verificar se está na página de parcelas
     if (window.location.pathname.includes('telaVerParcelas.html')) {
         inicializarPaginaParcelas()
     } else {
-        // Inicialização normal para outras páginas
         filtros = new SistemaFiltros()
         favoritos.inicializar()
         gerenciadorVeiculos.inicializar()
@@ -1215,10 +1201,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500)
     }
 })
-
-// ################################################################################
-//                          CÓDIGO ORIGINAL MANTIDO
-// ################################################################################
 
 const anunciarElemento = document.getElementById('anunciar')
 const icons = document.getElementById('payment-icon')
