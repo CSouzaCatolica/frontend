@@ -1,4 +1,3 @@
-/* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
@@ -13,83 +12,10 @@ body {
   color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Navbar hamburguer servicos */
-/* Dropdown básico */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 1000;
-}
-
-.links-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.dropdown-label {
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
-  padding: 10px 0;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  display: none;
-}
-
-/* Submenu escondido por padrão */
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #f5f5f5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  top: 100%;
-  left: 0;
-  z-index: 2000;
-}
-
-.submenu li a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.submenu li a:hover {
-  background-color: #ddd;
-}
-
-/* Exibe submenu quando checkbox está marcado */
 .dropdown-toggle:checked + .dropdown-label + .submenu {
   display: block;
 }
 
-/* Hero Section */
 .hero {
   background-color: white;
   padding: 60px 0;
@@ -135,7 +61,6 @@ nav {
   gap: 8px;
 }
 
-/* Banner */
 .banner {
   background: linear-gradient(135deg, #f3123c, #ff5c7c);
   color: white;
@@ -144,7 +69,6 @@ nav {
   margin: 40px 0;
 }
 
-/* Razões para vender */
 .razoes {
   padding: 60px 0;
   background-color: white;
@@ -190,7 +114,6 @@ nav {
   margin-top: 20px;
 }
 
-/* Cards de dúvidas */
 .cards-section {
   padding: 40px 0;
 }
@@ -225,7 +148,6 @@ nav {
   margin-top: 10px;
 }
 
-/* Video section */
 .video-section {
   background-color: white;
   padding: 60px 0;
@@ -247,8 +169,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-/*
-/* Como vender section */
+
 .como-vender {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -309,10 +230,7 @@ nav {
   color: #666;
   font-size: 14px;
 }
-*/
-
-/* Testimonials */
-.testimonials {
+*/ .testimonials {
   padding: 60px 0;
   background-color: white;
 }
@@ -348,7 +266,6 @@ nav {
   margin-top: 30px;
 }
 
-/* FAQ */
 .faq {
   padding: 30px 0;
   background-color: #f9f9f9;
@@ -375,7 +292,6 @@ nav {
   width: 100%;
 }
 
-/* Seção de segurança */
 .security {
   background-color: white;
   padding: 20px 0;
@@ -410,7 +326,7 @@ nav {
   border-radius: 4px;
 }
 
-.payment-icon-img{
+.payment-icon-img {
   width: 40px;
   height: 25px;
 }
@@ -420,62 +336,48 @@ nav {
   color: #666;
   margin-top: 10px;
 }
-/* ---------------------------------------------------------------------------------------------------- */
-/* Media Queries para Responsividade */
-/* ---------------------------------------------------------------------------------------------------- */
 
-/* Estilos para telas menores que 992px (laptops menores e tablets) - menuVender.css */
 @media (max-width: 992px) {
   .razoes-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    ); /* Ajusta o grid para 2 colunas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
 
   .cards-container {
-    flex-direction: column; /* Empilha os cartões verticalmente */
+    flex-direction: column;
     align-items: center;
   }
 
   .card {
-    width: 90%; /* Aumenta a largura dos cartões */
-    max-width: 500px; /* Limita a largura máxima */
+    width: 90%;
+    max-width: 500px;
   }
 
   .steps-container {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    ); /* Ajusta o grid de passos */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
 
   .step {
-    width: calc(50% - 15px); /* Dois passos por linha */
+    width: calc(50% - 15px);
   }
 
   .testimonials-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); /* Ajusta o grid de depoimentos */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .video-placeholder {
-    height: 350px; /* Reduz a altura do placeholder do vídeo */
+    height: 350px;
   }
 }
 
-/* Estilos para telas menores que 768px (tablets e smartphones) - menuVender.css */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 28px; /* Diminui o tamanho da fonte do título hero */
+    font-size: 28px;
   }
 
   .hero p {
-    font-size: 16px; /* Diminui o tamanho da fonte do parágrafo hero */
+    font-size: 16px;
   }
 
   .razoes h2,
@@ -483,51 +385,50 @@ nav {
   .como-vender h2,
   .testimonials h2,
   .faq h2 {
-    font-size: 24px; /* Diminui os títulos das seções */
+    font-size: 24px;
   }
 
   .razoes-grid,
   .testimonials-grid,
   .steps-container {
-    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .step {
-    width: 100%; /* Ocupa toda a largura */
+    width: 100%;
   }
 
   .video-placeholder {
-    height: 250px; /* Reduz ainda mais a altura do placeholder do vídeo */
+    height: 250px;
   }
 
   .security-content {
-    flex-direction: column; /* Empilha o conteúdo da seção de segurança */
+    flex-direction: column;
     gap: 20px;
   }
 
   .security-item {
-    max-width: 90%; /* Ajusta a largura do item de segurança */
+    max-width: 90%;
   }
 }
 
-/* Estilos para telas menores que 480px (smartphones) - menuVender.css */
 @media (max-width: 480px) {
   .hero {
-    padding: 40px 0; /* Reduz o padding da seção hero */
+    padding: 40px 0;
   }
 
   .hero h1 {
-    font-size: 22px; /* Diminui o tamanho da fonte do título hero */
+    font-size: 22px;
   }
 
   .hero p {
-    font-size: 14px; /* Diminui o tamanho da fonte do parágrafo hero */
+    font-size: 14px;
   }
 
   .btn-primary {
-    padding: 10px 20px; /* Ajusta o padding do botão primário */
-    font-size: 14px; /* Diminui o tamanho da fonte do botão primário */
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   .razoes h2,
@@ -535,19 +436,19 @@ nav {
   .como-vender h2,
   .testimonials h2,
   .faq h2 {
-    font-size: 20px; /* Diminui ainda mais os títulos das seções */
+    font-size: 20px;
   }
 
   .card {
-    padding: 15px; /* Reduz o padding do cartão */
+    padding: 15px;
   }
 
   .video-placeholder {
-    height: 180px; /* Mais uma redução na altura do placeholder do vídeo */
+    height: 180px;
   }
 
   .faq-item {
-    font-size: 14px; /* Diminui o tamanho da fonte dos itens do FAQ */
+    font-size: 14px;
     padding: 12px 15px;
   }
 }

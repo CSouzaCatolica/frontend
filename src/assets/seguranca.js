@@ -1,11 +1,9 @@
-// Animação dos cards ao carregar
 document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.security-card')
   cards.forEach(card => {
     card.classList.add('fade-in')
   })
 
-  // Contador animado para os números
   const statNumbers = document.querySelectorAll('.stat-number')
   statNumbers.forEach(stat => {
     const finalNumber = stat.textContent
@@ -51,7 +49,6 @@ function animateNumber (element, finalValue) {
   }
 }
 
-// Efeito de hover suave nos cards
 document.querySelectorAll('.security-card').forEach(card => {
   card.addEventListener('mouseenter', function () {
     this.style.transform = 'translateY(-8px) scale(1.02)'

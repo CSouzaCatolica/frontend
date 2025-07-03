@@ -1,4 +1,3 @@
-// Função modular para criar botão de adicionar ao carrinho
 function criarBotaoCarrinho (veiculo, container) {
   const botaoCarrinho = document.createElement('button')
   botaoCarrinho.className = 'botao-contato'
@@ -21,7 +20,6 @@ function criarBotaoCarrinho (veiculo, container) {
   return botaoCarrinho
 }
 
-// Função para recuperar dados do veículo na página de detalhes
 function obterVeiculoSelecionado () {
   try {
     const dadosVeiculo = sessionStorage.getItem('veiculoSelecionado')

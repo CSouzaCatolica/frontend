@@ -1,4 +1,3 @@
-/* Reset e estilos base */
 * {
   margin: 0;
   padding: 0;
@@ -24,52 +23,60 @@ a {
   padding: 0 16px;
 }
 
-/* Header e Navigation */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
   background-color: white;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
 }
 
 .links-nav {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  gap: 24px;
 }
 
 .links-nav a {
+  text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
 .links-nav a:hover {
-  background-color: #f3123c;
-  color: white;
+  color: #f3123c;
 }
 
 .barra-direita {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
 .barra-direita input {
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 250px;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.barra-direita input:focus {
+  outline: none;
+  border-color: #f3123c;
 }
 
 .botao-login {
@@ -79,6 +86,7 @@ nav {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
   transition: background-color 0.2s;
 }
 
@@ -86,11 +94,19 @@ nav {
   background-color: #d10e32;
 }
 
-.botao-login a {
-  color: white;
+.favoritos {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
 }
 
-/* Services Grid */
+.favoritos:hover {
+  color: #f3123c;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -114,7 +130,7 @@ nav {
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +170,7 @@ nav {
 }
 
 .service-features li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #f3123c;
@@ -181,7 +197,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Destaque para serviços específicos */
 #compra-venda {
   background: linear-gradient(135deg, #f8f9ff, #ffffff);
   border: 2px solid #f3123c;
@@ -203,7 +218,6 @@ nav {
   background: linear-gradient(135deg, #f0f8ff, #ffffff);
 }
 
-/* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, #f3123c, #ff5c7c);
   color: white;
@@ -242,7 +256,6 @@ nav {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* FAQ Section */
 .faq-section {
   background-color: white;
   padding: 60px 0;
@@ -292,7 +305,6 @@ nav {
   line-height: 1.6;
 }
 
-/* Footer */
 .footer-space {
   background: #2c3e50;
   color: white;
@@ -372,11 +384,7 @@ nav {
   color: #999;
   font-size: 14px;
 }
-/* ---------------------------------------------------------------------------------------------------- */
-/* Media Queries para Responsividade */
-/* ---------------------------------------------------------------------------------------------------- */
 
-/* Estilos para telas menores que 992px (laptops menores e tablets) */
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -397,7 +405,6 @@ nav {
   }
 }
 
-/* Estilos para telas menores que 768px (tablets e smartphones) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -460,7 +467,6 @@ nav {
   }
 }
 
-/* Estilos para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
   .container {
     padding: 0 12px;
@@ -557,7 +563,6 @@ nav {
   }
 }
 
-/* Animações adicionais */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -573,9 +578,21 @@ nav {
   animation: fadeInUp 0.6s ease-out;
 }
 
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
-.service-card:nth-child(4) { animation-delay: 0.4s; }
-.service-card:nth-child(5) { animation-delay: 0.5s; }
-.service-card:nth-child(6) { animation-delay: 0.6s; }
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.service-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
