@@ -23,51 +23,60 @@ a {
   padding: 0 16px;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
   background-color: white;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
 }
 
 .links-nav {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  gap: 24px;
 }
 
 .links-nav a {
+  text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
 .links-nav a:hover {
-  background-color: #f3123c;
-  color: white;
+  color: #f3123c;
 }
 
 .barra-direita {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
 .barra-direita input {
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 250px;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.barra-direita input:focus {
+  outline: none;
+  border-color: #f3123c;
 }
 
 .botao-login {
@@ -77,6 +86,7 @@ nav {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
   transition: background-color 0.2s;
 }
 
@@ -84,8 +94,17 @@ nav {
   background-color: #d10e32;
 }
 
-.botao-login a {
-  color: white;
+.favoritos {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.favoritos:hover {
+  color: #f3123c;
 }
 
 .services-grid {
