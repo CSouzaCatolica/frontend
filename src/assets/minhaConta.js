@@ -1,10 +1,4 @@
-// ################################################################################
-//                    SCRIPT ATUALIZADO PARA PÁGINA MINHA CONTA
-// ################################################################################
-
-// ################################################################################
-//                          SISTEMA DE TOAST MELHORADO
-// ################################################################################
+// toast
 function toast (mensagem, tipo = 'info', duracao = 3000) {
   const existingToasts = document.querySelectorAll('.toast')
   if (existingToasts.length > 3) {
@@ -66,12 +60,10 @@ class GerenciadorConta {
     dataItems.forEach((item, index) => {
       const label = item.querySelector('.data-label').textContent.toLowerCase()
 
-      // Não adicionar botão para campos sensíveis
       if (label.includes('cpf') || label.includes('rg')) {
         return
       }
 
-      // Verificar se já existe botão
       if (item.querySelector('.edit-btn')) {
         return
       }
@@ -88,7 +80,6 @@ class GerenciadorConta {
   }
 
   carregarDadosUsuario () {
-    // Simular dados do usuário - em produção viria de uma API
     return {
       nome: 'Roger Knela Seka',
       email: 'RogerKnelaSeka@gmail.com',
@@ -117,28 +108,23 @@ class GerenciadorConta {
   }
 
   configurarNavegacao () {
-    // Função global para trocar seções
     window.showSection = secao => {
       this.mostrarSecao(secao)
     }
   }
 
   mostrarSecao (secao) {
-    // Esconder todas as seções
     const secoes = document.querySelectorAll('.content-section')
     secoes.forEach(s => (s.style.display = 'none'))
 
-    // Remover classe ativa de todos os links
     const links = document.querySelectorAll('.sidebar-menu a')
     links.forEach(l => l.classList.remove('active'))
 
-    // Mostrar seção selecionada
     const secaoElemento = document.getElementById(`${secao}-section`)
     if (secaoElemento) {
       secaoElemento.style.display = 'block'
       this.secaoAtiva = secao
 
-      // Ativar link correspondente
       const linkAtivo = document.querySelector(
         `[onclick="showSection('${secao}')"]`
       )
@@ -146,12 +132,10 @@ class GerenciadorConta {
         linkAtivo.classList.add('active')
       }
 
-      // Adicionar botões de edição individual se for seção pessoal
       if (secao === 'personal') {
         this.adicionarBotoesEdicaoIndividual()
       }
 
-      // Executar ações específicas da seção
       this.executarAcaoSecao(secao)
     }
   }
@@ -287,7 +271,6 @@ class GerenciadorConta {
   }
 
   atualizarResumoAtividades () {
-    // Simular atualização de dados em tempo real
     const visualizacoes = document.querySelector(
       '.info-card:nth-child(3) .info-card-value'
     )
@@ -300,13 +283,11 @@ class GerenciadorConta {
   }
 
   atualizarDadosInterface () {
-    // Atualizar nome do usuário
     const nomeElement = document.querySelector('.profile-name')
     if (nomeElement) {
       nomeElement.textContent = this.dadosUsuario.nome
     }
 
-    // Atualizar avatar
     const avatar = document.querySelector('.profile-avatar img')
     if (avatar) {
       avatar.src = this.dadosUsuario.avatar
@@ -314,7 +295,6 @@ class GerenciadorConta {
   }
 
   configurarModais () {
-    // Função global para abrir modais
     window.openModal = modalId => {
       const modal = document.getElementById(modalId)
       if (modal) {
@@ -323,14 +303,12 @@ class GerenciadorConta {
       }
     }
 
-    // Função global para fechar modais
     window.closeModal = modalId => {
       const modal = document.getElementById(modalId)
       if (modal) {
         modal.classList.remove('show')
         setTimeout(() => {
           modal.style.display = 'none'
-          // Remover modais dinâmicos
           if (modalId === 'veiculosModal' || modalId === 'termosModal') {
             modal.remove()
           }
@@ -338,14 +316,12 @@ class GerenciadorConta {
       }
     }
 
-    // Função global para mostrar toast
     window.showToast = (mensagem, tipo = 'info') => {
       toast(mensagem, tipo)
     }
   }
 
   configurarFormularios () {
-    // Configurar formulário de edição completo
     const editForm = document.getElementById('editForm')
     if (editForm) {
       editForm.addEventListener('submit', e => {
@@ -354,7 +330,6 @@ class GerenciadorConta {
       })
     }
 
-    // Configurar formulário de edição completo expandido
     this.criarFormularioCompleto()
   }
 
@@ -372,7 +347,6 @@ class GerenciadorConta {
       CEP: this.dadosUsuario.cep
     }
 
-    // Atualizar cada campo na interface
     const dataItems = document.querySelectorAll('#personal-section .data-item')
     dataItems.forEach(item => {
       const label = item.querySelector('.data-label').textContent
@@ -387,13 +361,10 @@ class GerenciadorConta {
   salvarDadosCompletos (form) {
     const formData = new FormData(form)
     const dadosAtualizados = {}
-
-    // Extrair todos os dados do formulário
     for (let [key, value] of formData.entries()) {
       dadosAtualizados[key] = value
     }
 
-    // Validar dados obrigatórios
     if (
       !dadosAtualizados.nome ||
       !dadosAtualizados.email ||
@@ -403,7 +374,6 @@ class GerenciadorConta {
       return
     }
 
-    // Validar formato do email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(dadosAtualizados.email)) {
       toast('Por favor, insira um e-mail válido', 'error')
@@ -413,14 +383,12 @@ class GerenciadorConta {
     toast('Salvando todas as alterações...', 'info', 2000)
 
     setTimeout(() => {
-      // Atualizar todos os dados do usuário
       Object.keys(dadosAtualizados).forEach(key => {
         if (this.dadosUsuario[key] !== undefined) {
           this.dadosUsuario[key] = dadosAtualizados[key]
         }
       })
 
-      // Converter data de volta para formato brasileiro
       if (dadosAtualizados.dataNascimento) {
         const data = new Date(dadosAtualizados.dataNascimento)
         this.dadosUsuario.dataNascimento = `${data
@@ -431,11 +399,9 @@ class GerenciadorConta {
           .padStart(2, '0')}/${data.getFullYear()}`
       }
 
-      // Atualizar interface
       this.atualizarDadosInterface()
       this.atualizarDadosNaSecao()
 
-      // Fechar modal e mostrar sucesso
       closeModal('editModal')
       toast('Todos os dados foram atualizados com sucesso!', 'success')
     }, 2000)
@@ -445,16 +411,13 @@ class GerenciadorConta {
     const dataValue = item.querySelector('.data-value')
     const valorAtual = dataValue.textContent
 
-    // Criar input de edição
     const input = document.createElement('input')
     input.type = this.getTipoInput(label)
     input.value = valorAtual
     input.className = 'edit-input'
 
-    // Configurar input baseado no tipo de campo
     this.configurarInput(input, label)
 
-    // Criar botões de ação
     const actionDiv = document.createElement('div')
     actionDiv.className = 'edit-actions'
 
@@ -471,7 +434,6 @@ class GerenciadorConta {
     actionDiv.appendChild(saveBtn)
     actionDiv.appendChild(cancelBtn)
 
-    // Substituir conteúdo
     dataValue.style.display = 'none'
     item.querySelector('.edit-btn').style.display = 'none'
     item.appendChild(input)
@@ -496,7 +458,6 @@ class GerenciadorConta {
     input.style.borderRadius = '4px'
     input.style.fontSize = '14px'
 
-    // Adicionar máscaras e validações
     if (label.includes('telefone') || label.includes('celular')) {
       input.placeholder = '(00) 00000-0000'
       input.addEventListener('input', this.mascaraTelefone)
@@ -538,24 +499,19 @@ class GerenciadorConta {
       return
     }
 
-    // Validar baseado no tipo de campo
     if (!this.validarCampo(label, novoValor)) {
       return
     }
 
-    // Simular salvamento
     toast('Salvando alteração...', 'info', 1000)
 
     setTimeout(() => {
-      // Atualizar dados do usuário
       this.atualizarDadoUsuario(label, novoValor)
 
-      // Restaurar visualização
       const dataValue = item.querySelector('.data-value')
       dataValue.textContent = novoValor
       dataValue.style.display = 'block'
 
-      // Remover elementos de edição
       const editInput = item.querySelector('.edit-input')
       const editActions = item.querySelector('.edit-actions')
       const editBtn = item.querySelector('.edit-btn')
@@ -564,7 +520,6 @@ class GerenciadorConta {
       if (editActions) editActions.remove()
       if (editBtn) editBtn.style.display = 'block'
 
-      // Atualizar interface se necessário
       if (label.includes('nome')) {
         this.atualizarDadosInterface()
       }
@@ -634,7 +589,6 @@ class GerenciadorConta {
   }
 
   criarFormularioCompleto () {
-    // Substituir o modal de edição existente
     const modalExistente = document.getElementById('editModal')
     if (modalExistente) {
       modalExistente.innerHTML = `
@@ -734,8 +688,6 @@ class GerenciadorConta {
         </form>
       </div>
     `
-
-      // Configurar novo formulário
       const newForm = document.getElementById('editCompleteForm')
       if (newForm) {
         newForm.addEventListener('submit', e => {
@@ -743,7 +695,6 @@ class GerenciadorConta {
           this.salvarDadosCompletos(e.target)
         })
 
-        // Adicionar máscaras aos campos
         this.adicionarMascarasFormulario(newForm)
       }
     }
@@ -775,7 +726,7 @@ class GerenciadorConta {
 }
 
 // ################################################################################
-//                          FUNÇÕES GLOBAIS ESPECÍFICAS
+//                          FUNÇÕES GLOBAIS
 // ################################################################################
 
 function redirecionarParaHome () {
@@ -789,7 +740,6 @@ function aceitarTermos () {
   toast('Termos aceitos com sucesso!', 'success')
   closeModal('termosModal')
 
-  // Voltar para a seção overview
   showSection('overview')
 }
 
@@ -817,7 +767,6 @@ function exportarDados () {
   toast('Preparando exportação dos dados...', 'info', 2000)
 
   setTimeout(() => {
-    // Simular download de arquivo
     const dadosExport = {
       usuario: gerenciadorConta.dadosUsuario,
       dataExportacao: new Date().toISOString(),
@@ -841,10 +790,6 @@ function exportarDados () {
   }, 2000)
 }
 
-// ################################################################################
-//                          MELHORIAS DE UX/UI
-// ################################################################################
-
 class MelhoriaUX {
   constructor () {
     this.inicializar()
@@ -858,7 +803,6 @@ class MelhoriaUX {
   }
 
   adicionarAnimacoes () {
-    // Adicionar efeito hover nos cards
     const cards = document.querySelectorAll('.info-card')
     cards.forEach(card => {
       card.addEventListener('mouseenter', () => {
@@ -906,7 +850,6 @@ class MelhoriaUX {
   }
 
   adicionarIndicadoresCarregamento () {
-    // Adicionar loading nos botões quando necessário
     const botoes = document.querySelectorAll('.btn')
     botoes.forEach(botao => {
       const textoOriginal = botao.innerHTML
@@ -924,7 +867,6 @@ class MelhoriaUX {
   }
 
   configurarTooltips () {
-    // Adicionar tooltips informativos
     const elementosComTooltip = [
       {
         selector: '.profile-avatar',
@@ -950,40 +892,30 @@ class MelhoriaUX {
 let gerenciadorConta, melhoriaUX
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializar sistemas
   gerenciadorConta = new GerenciadorConta()
   melhoriaUX = new MelhoriaUX()
 
-  // Configurar botão de upload de avatar
   const botaoUpload = document.querySelector('#avatarModal .btn-primary')
   if (botaoUpload) {
     botaoUpload.onclick = alterarAvatar
   }
 
-  // Configurar botão de exportar dados
   const botaoExportar = document.querySelector(
     '.btn-secondary[onclick*="exportados"]'
   )
   if (botaoExportar) {
     botaoExportar.onclick = exportarDados
   }
-
-  // Mostrar seção inicial
   showSection('overview')
 
   console.log('Sistema de conta inicializado com sucesso!')
 })
-
-// ################################################################################
-//                          TRATAMENTO DE ERROS
-// ################################################################################
 
 window.addEventListener('error', e => {
   console.error('Erro na página:', e.error)
   toast('Ocorreu um erro inesperado. Tente recarregar a página.', 'error', 5000)
 })
 
-// Tratar promises rejeitadas
 window.addEventListener('unhandledrejection', e => {
   console.error('Promise rejeitada:', e.reason)
   toast('Erro de conexão. Verifique sua internet.', 'error', 3000)
@@ -1112,6 +1044,4 @@ const estilosEdicao = `
 }
 </style>
 `
-
-// Adicionar os estilos ao documento
 document.head.insertAdjacentHTML('beforeend', estilosEdicao)

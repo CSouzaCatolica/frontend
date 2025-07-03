@@ -1,493 +1,485 @@
-/* Reset e estilos base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .w-50 {
-    width: 50%;
+  width: 50%;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
-/* Header e Navegação */
 header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-    height: 30px;
+  height: 30px;
 }
 
 .links-nav {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .links-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.2s;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .links-nav a:hover {
-    color: #f3123c;
+  color: #f3123c;
 }
 
 .barra-direita {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .barra-direita input {
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 220px;
-    transition: border-color 0.2s;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 220px;
+  transition: border-color 0.2s;
 }
 
 .barra-direita input:focus {
-    outline: none;
-    border-color: #f3123c;
+  outline: none;
+  border-color: #f3123c;
 }
 
 .botao-login {
-    background-color: #f3123c;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.2s;
+  background-color: #f3123c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .botao-login:hover {
-    background-color: #d10e32;
+  background-color: #d10e32;
 }
 
 .favoritos {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #666;
-    transition: color 0.2s;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
 }
 
 .favoritos:hover {
-    color: #f3123c;
+  color: #f3123c;
 }
 
-/* Conteúdo principal */
 main {
-    max-width: 1200px;
-    margin: 32px auto;
-    display: flex;
-    gap: 32px;
+  max-width: 1200px;
+  margin: 32px auto;
+  display: flex;
+  gap: 32px;
 }
 
-/* Filtros */
 .filtros {
-    width: 250px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    height: fit-content;
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .filtros h3 {
-    margin-bottom: 16px;
-    color: #333;
+  margin-bottom: 16px;
+  color: #333;
 }
 
 .grupo-filtro {
-    margin: 16px 0;
-    display: flex;
-    gap: 8px;
+  margin: 16px 0;
+  display: flex;
+  gap: 8px;
 }
 
 .botao-filtro {
-    padding: 8px 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background: white;
-    cursor: pointer;
-    transition: all 0.2s;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .botao-filtro:hover {
-    background: #f9f9f9;
+  background: #f9f9f9;
 }
 
 .botao-filtro.ativo {
-    background: #f3123c;
-    color: white;
-    border-color: #f3123c;
+  background: #f3123c;
+  color: white;
+  border-color: #f3123c;
 }
 
 .localizacao {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .localizacao h4 {
-    margin-bottom: 12px;
-    color: #333;
+  margin-bottom: 12px;
+  color: #333;
 }
 
 .barraPesquisaDois {
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    transition: border-color 0.2s;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  transition: border-color 0.2s;
 }
 
 .barraPesquisaDois:focus {
-    outline: none;
-    border-color: #f3123c;
+  outline: none;
+  border-color: #f3123c;
 }
 
-/* Grade de veículos */
 .grade-veiculos {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
 
 .cartao-veiculo {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .cartao-veiculo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cartao-veiculo img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .info-cartao {
-    padding: 16px;
+  padding: 16px;
 }
 
 .info-cartao h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
 }
 
 .info-cartao p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .preco {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 16px 0;
-    color: #f3123c;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 16px 0;
+  color: #f3123c;
 }
 
 .ver-parcelas {
-    background: #2E2D37;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 4px;
-    height: 50px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: 500;
-    transition: background-color 0.2s;
+  background: #2e2d37;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  height: 50px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .ver-parcelas:hover {
-    background: #1a1921;
+  background: #1a1921;
 }
-/* Footer */
+
 .footer-space {
-    background: #2c3e50;
-    color: white;
-    padding: 40px 0 20px;
-    margin-top: 50px;
+  background: #2c3e50;
+  color: white;
+  padding: 40px 0 20px;
+  margin-top: 50px;
 }
 
 .footer-main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .devs h2 {
-    color: #f3123c;
-    margin-bottom: 15px;
-    font-size: 18px;
+  color: #f3123c;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .devs ul {
-    list-style: none;
+  list-style: none;
 }
 
 .devs li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .devs a {
-    color: #bdc3c7;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s;
+  color: #bdc3c7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
 }
 
 .devs a:hover {
-    color: white;
+  color: white;
 }
 
 .footer-box ul {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-box li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .footer-box a {
-    color: #bdc3c7;
-    transition: color 0.3s;
+  color: #bdc3c7;
+  transition: color 0.3s;
 }
 
 .footer-box a:hover {
-    color: white;
+  color: white;
 }
 
 .w-100 {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #555;
-    padding-top: 20px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #555;
+  padding-top: 20px;
 }
 
 .w-100 p {
-    color: #999;
-    font-size: 14px;
+  color: #999;
+  font-size: 14px;
 }
-/* ---------------------------------------------------------------------------------------------------- */
-/* Media Queries para Responsividade */
-/* ---------------------------------------------------------------------------------------------------- */
 
-/* Estilos para telas menores que 992px (laptops menores e tablets) - style.css (home.html) */
 @media (max-width: 992px) {
-    nav {
-        flex-wrap: wrap; /* Permite que os itens da navegação quebrem para a próxima linha */
-        justify-content: center;
-        gap: 15px; /* Espaçamento entre os itens da nav */
-    }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 
-    .links-nav {
-        flex-direction: column; /* Empilha os links de navegação */
-        align-items: center;
-        width: 100%;
-        margin-top: 15px;
-    }
+  .links-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+  }
 
-    .barra-direita {
-        width: 100%;
-        justify-content: center;
-        margin-top: 15px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  .barra-direita {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-    .barra-direita input {
-        width: 80%; /* Aumenta a largura da barra de pesquisa */
-        max-width: 300px;
-    }
+  .barra-direita input {
+    width: 80%;
+    max-width: 300px;
+  }
 
-    main {
-        flex-direction: column; /* Empilha os filtros e a grade de veículos */
-        align-items: center; /* Centraliza os itens */
-        margin: 20px auto; /* Ajusta a margem */
-    }
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
 
-    .filtros {
-        width: 90%; /* Aumenta a largura dos filtros */
-        max-width: 400px; /* Limita a largura máxima */
-        margin-bottom: 20px;
-    }
+  .filtros {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
 
-    .grade-veiculos {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta o grid para 2 colunas */
-        width: 95%; /* Ocupa mais largura */
-    }
+  .grade-veiculos {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 95%;
+  }
 
-    .footer-container {
-        flex-direction: column; /* Empilha os desenvolvedores e o "Sobre" no rodapé */
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
 
-    .footer-box.w-50,
-    .footer-box.w-100 {
-        width: 100%; /* Ocupa toda a largura no rodapé */
-    }
+  .footer-box.w-50,
+  .footer-box.w-100 {
+    width: 100%;
+  }
 }
 
-/* Estilos para telas menores que 768px (tablets e smartphones) - style.css (home.html) */
 @media (max-width: 768px) {
-    header {
-        padding: 10px; /* Reduz o padding do cabeçalho */
-    }
+  header {
+    padding: 10px;
+  }
 
-    .logo img {
-        height: 25px; /* Diminui o tamanho do logo */
-    }
+  .logo img {
+    height: 25px;
+  }
 
-    .links-nav a {
-        font-size: 14px; /* Diminui o tamanho da fonte dos links */
-        padding: 5px 0;
-    }
+  .links-nav a {
+    font-size: 14px;
+    padding: 5px 0;
+  }
 
-    .barra-direita input {
-        padding: 8px 10px; /* Ajusta o padding da barra de pesquisa */
-        font-size: 14px;
-    }
+  .barra-direita input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 
-    .botao-login {
-        padding: 6px 12px; /* Ajusta o padding do botão de login */
-        font-size: 14px;
-    }
+  .botao-login {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 
-    .favoritos {
-        font-size: 18px; /* Diminui o tamanho do ícone de favoritos */
-    }
+  .favoritos {
+    font-size: 18px;
+  }
 
-    .filtros h3,
-    .localizacao h4 {
-        font-size: 18px; /* Diminui o tamanho da fonte dos títulos dos filtros */
-    }
+  .filtros h3,
+  .localizacao h4 {
+    font-size: 18px;
+  }
 
-    .grupo-filtro .botao-filtro {
-        padding: 6px 12px; /* Ajusta o padding dos botões de filtro */
-        font-size: 13px;
-    }
+  .grupo-filtro .botao-filtro {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
 
-    .grade-veiculos {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        gap: 15px;
-    }
+  .grade-veiculos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-    .cartao-veiculo {
-        width: 95%; /* Ajusta a largura do cartão de veículo */
-        margin: 0 auto; /* Centraliza o cartão */
-    }
+  .cartao-veiculo {
+    width: 95%;
+    margin: 0 auto;
+  }
 
-    .info-cartao h2 {
-        font-size: 16px; /* Diminui o tamanho da fonte do título do veículo */
-    }
+  .info-cartao h2 {
+    font-size: 16px;
+  }
 
-    .info-cartao p {
-        font-size: 13px; /* Diminui o tamanho da fonte da descrição */
-    }
+  .info-cartao p {
+    font-size: 13px;
+  }
 
-    .preco {
-        font-size: 20px; /* Diminui o tamanho da fonte do preço */
-    }
+  .preco {
+    font-size: 20px;
+  }
 
-    .ver-parcelas {
-        padding: 8px 12px; /* Ajusta o padding do botão "Ver parcelas" */
-        font-size: 14px;
-        height: auto;
-    }
+  .ver-parcelas {
+    padding: 8px 12px;
+    font-size: 14px;
+    height: auto;
+  }
 
-    .footer-space {
-        margin: 30px auto 15px; /* Ajusta as margens do rodapé */
-        padding-top: 20px;
-    }
+  .footer-space {
+    margin: 30px auto 15px;
+    padding-top: 20px;
+  }
 
-    .footer-container {
-        padding: 15px; /* Reduz o padding do container do rodapé */
-    }
+  .footer-container {
+    padding: 15px;
+  }
 
-    .devs h2, .footer-box h2 {
-        font-size: 16px; /* Diminui o tamanho da fonte dos títulos do rodapé */
-    }
+  .devs h2,
+  .footer-box h2 {
+    font-size: 16px;
+  }
 
-    .devs li, .footer-box p {
-        font-size: 13px; /* Diminui o tamanho da fonte do texto do rodapé */
-    }
+  .devs li,
+  .footer-box p {
+    font-size: 13px;
+  }
 }
 
-/* Estilos para telas menores que 480px (smartphones) - style.css (home.html) */
 @media (max-width: 480px) {
-    nav {
-        padding: 8px; /* Reduz ainda mais o padding da navegação */
-    }
+  nav {
+    padding: 8px;
+  }
 
-    .barra-direita input {
-        width: 100%; /* Ocupa a largura total */
-    }
+  .barra-direita input {
+    width: 100%;
+  }
 
-    .filtros {
-        padding: 15px; /* Reduz o padding dos filtros */
-    }
+  .filtros {
+    padding: 15px;
+  }
 
-    .marcasHome img {
-        width: 45%; /* Ajusta o tamanho das imagens das marcas */
-        margin-bottom: 10px;
-    }
+  .marcasHome img {
+    width: 45%;
+    margin-bottom: 10px;
+  }
 }

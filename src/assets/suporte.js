@@ -2,7 +2,6 @@ function searchHelp () {
   const query = document.getElementById('searchInput').value
   if (query.trim()) {
     showToast(`Buscando por: "${query}"`)
-    // Aqui você implementaria a lógica de busca real
   } else {
     showToast('Digite algo para buscar')
   }
@@ -25,7 +24,6 @@ function showToast (message) {
   }, 3000)
 }
 
-// Enter key support for search
 document
   .getElementById('searchInput')
   .addEventListener('keypress', function (e) {
@@ -34,7 +32,6 @@ document
     }
   })
 
-// Add smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
