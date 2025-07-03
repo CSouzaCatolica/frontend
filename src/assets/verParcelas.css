@@ -1,5 +1,3 @@
-/* Navbar hamburguer servicos */
-/* Dropdown básico */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -20,7 +18,7 @@ nav {
   align-items: center;
   gap: 20px;
 }
-/* Submenu escondido por padrão */
+
 .submenu {
   display: none;
   position: absolute;
@@ -183,7 +181,7 @@ nav {
 }
 
 .solicitar-financiamento {
-  background-color: #2E2D37;
+  background-color: #2e2d37;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -215,28 +213,27 @@ nav {
   color: #555;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .banner-imagens {
     flex-direction: column;
     position: relative;
     padding-top: 0;
   }
-  
+
   .banner-imagens img {
     width: 100%;
   }
-  
+
   .cartao-veiculo.detalhes {
     margin-top: 24px;
   }
-  
+
   .preco-detalhes {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
   }
-  
+
   .opcoes-financiamento {
     grid-template-columns: 1fr;
   }
@@ -288,143 +285,137 @@ nav {
 
 .opcao-financiamento:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.cartao-veiculo::before{
+.cartao-veiculo::before {
   content: none !important;
 }
-/* ---------------------------------------------------------------------------------------------------- */
-/* Media Queries para Responsividade */
-/* ---------------------------------------------------------------------------------------------------- */
 
-/* Estilos para telas menores que 992px (laptops menores e tablets) - verParcelas.css */
 @media (max-width: 992px) {
-    .banner-imagens img {
-        height: 200px; /* Reduz a altura das imagens do banner */
-    }
+  .banner-imagens img {
+    height: 200px;
+  }
 
-    .cartao-veiculo.detalhes {
-        margin-top: 280px; /* Ajusta a margem superior do cartão de detalhes */
-        padding: 25px; /* Reduz o padding */
-    }
+  .cartao-veiculo.detalhes {
+    margin-top: 280px;
+    padding: 25px;
+  }
 
-    .preco-grande {
-        font-size: 28px; /* Diminui o tamanho da fonte do preço grande */
-    }
+  .preco-grande {
+    font-size: 28px;
+  }
 
-    .botao-contato {
-        padding: 10px 20px; /* Ajusta o padding do botão de contato */
-        font-size: 15px;
-    }
+  .botao-contato {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 
-    .informacoes-detalhadas {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta o grid de informações detalhadas */
-        gap: 18px;
-    }
+  .informacoes-detalhadas {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 18px;
+  }
 
-    .simulacao-financiamento h2,
-    .descricao-veiculo h2 {
-        font-size: 18px; /* Diminui o tamanho da fonte dos títulos de seção */
-    }
+  .simulacao-financiamento h2,
+  .descricao-veiculo h2 {
+    font-size: 18px;
+  }
 
-    .opcoes-financiamento {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajusta o grid de opções de financiamento */
-        gap: 12px;
-    }
+  .opcoes-financiamento {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
 
-    .opcao-financiamento {
-        padding: 14px; /* Reduz o padding das opções de financiamento */
-    }
+  .opcao-financiamento {
+    padding: 14px;
+  }
 
-    .valor-entrada {
-        font-size: 16px; /* Diminui o tamanho da fonte do valor de entrada */
-    }
+  .valor-entrada {
+    font-size: 16px;
+  }
 
-    .solicitar-financiamento {
-        padding: 10px 20px; /* Ajusta o padding do botão de solicitação */
-        font-size: 15px;
-    }
+  .solicitar-financiamento {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
 }
 
-/* Estilos para telas menores que 768px (tablets e smartphones) - verParcelas.css */
 @media (max-width: 768px) {
-    .banner-imagens {
-        flex-direction: column; /* Empilha as imagens do banner verticalmente */
-        position: relative; /* Remove o fixed para evitar sobreposição */
-        padding-top: 0; /* Remove o padding top */
-    }
-    
-    .banner-imagens img {
-        width: 100%; /* Ocupa a largura total */
-        height: 200px; /* Define uma altura fixa para as imagens empilhadas */
-    }
-    
-    .cartao-veiculo.detalhes {
-        margin-top: 20px; /* Ajusta a margem superior para espaçamento */
-        width: 95%; /* Aumenta a largura do cartão */
-        padding: 20px;
-    }
-    
-    .preco-detalhes {
-        flex-direction: column; /* Empilha o preço e o botão de contato */
-        gap: 15px;
-        align-items: flex-start; /* Alinha à esquerda */
-    }
+  .banner-imagens {
+    flex-direction: column;
+    position: relative;
+    padding-top: 0;
+  }
 
-    .preco-grande {
-        font-size: 26px; /* Diminui o tamanho da fonte do preço grande */
-    }
+  .banner-imagens img {
+    width: 100%;
+    height: 200px;
+  }
 
-    .informacoes-detalhadas {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        gap: 15px;
-    }
-    
-    .opcoes-financiamento {
-        grid-template-columns: 1fr; /* Uma coluna nas opções de financiamento */
-    }
+  .cartao-veiculo.detalhes {
+    margin-top: 20px;
+    width: 95%;
+    padding: 20px;
+  }
 
-    .descricao-veiculo p {
-        font-size: 15px; /* Diminui o tamanho da fonte da descrição */
-    }
+  .preco-detalhes {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .preco-grande {
+    font-size: 26px;
+  }
+
+  .informacoes-detalhadas {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .opcoes-financiamento {
+    grid-template-columns: 1fr;
+  }
+
+  .descricao-veiculo p {
+    font-size: 15px;
+  }
 }
 
-/* Estilos para telas menores que 480px (smartphones) - verParcelas.css */
 @media (max-width: 480px) {
-    .cartao-veiculo.detalhes {
-        padding: 15px; /* Reduz o padding do cartão de detalhes */
-    }
+  .cartao-veiculo.detalhes {
+    padding: 15px;
+  }
 
-    .preco-grande {
-        font-size: 22px; /* Diminui ainda mais o tamanho da fonte do preço grande */
-    }
+  .preco-grande {
+    font-size: 22px;
+  }
 
-    .botao-contato,
-    .solicitar-financiamento {
-        padding: 10px 15px; /* Ajusta o padding dos botões */
-        font-size: 14px;
-    }
+  .botao-contato,
+  .solicitar-financiamento {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 
-    .info-label,
-    .info-value {
-        font-size: 13px; /* Diminui o tamanho da fonte das informações detalhadas */
-    }
+  .info-label,
+  .info-value {
+    font-size: 13px;
+  }
 
-    .simulacao-financiamento h2,
-    .descricao-veiculo h2 {
-        font-size: 16px; /* Diminui o tamanho da fonte dos títulos das seções */
-    }
+  .simulacao-financiamento h2,
+  .descricao-veiculo h2 {
+    font-size: 16px;
+  }
 
-    .opcao-financiamento h3,
-    .valor-entrada {
-        font-size: 14px; /* Diminui o tamanho da fonte das opções de financiamento */
-    }
+  .opcao-financiamento h3,
+  .valor-entrada {
+    font-size: 14px;
+  }
 
-    .disclaimer {
-        font-size: 11px; /* Diminui o tamanho da fonte do disclaimer */
-    }
+  .disclaimer {
+    font-size: 11px;
+  }
 
-    .descricao-veiculo p {
-        font-size: 14px; /* Diminui ainda mais o tamanho da fonte da descrição */
-    }
+  .descricao-veiculo p {
+    font-size: 14px;
+  }
 }
