@@ -43,7 +43,6 @@ function createToastContainer() {
     document.body.appendChild(container)
     return container
 }
-//
 
 const loginForm = document.getElementById('loginForm')
 const loginButton = document.getElementById('loginBtn')
